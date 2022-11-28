@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import MessageInput from './MessageInput';
+import MessageInput from '../chat-input/MessageInput';
 import './chat.css';
 
 const ChatContent = ({ open }) => {
