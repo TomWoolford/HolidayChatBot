@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import './App.css';
-import ChatBot from './components/ChatBot';
+import ChatWrapper from './components/ChatWrapper';
 
 function App() {
   return (
@@ -9,7 +8,7 @@ function App() {
         <h1>Holiday Chat Protoype</h1>
       </div>
       <div className="main-content row">
-        <ChatBot />
+        <ChatWrapper />
       </div>      
     </div>
   )

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { IoIosSend } from 'react-icons/io';
-import './chat.css';
+import './chatInput.css';
 
 const MessageInput = ({ inputState, submit }) => {
     const {userInput, setuserInput} = inputState;
@@ -9,7 +9,7 @@ const MessageInput = ({ inputState, submit }) => {
         <>
             <input 
                 className="message-input" 
-                type="text"
+                type="text" 
                 placeholder="Write a message here..."
                 value={userInput}
                 onChange={(e) => setuserInput(e.target.value)}
