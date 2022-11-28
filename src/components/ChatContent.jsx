@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import PropTypes from 'prop-types';
+import { IoIosSend } from 'react-icons/io';
 import './chat.css';
 
 const ChatContent = ({ open }) => {
@@ -10,7 +11,14 @@ const ChatContent = ({ open }) => {
             <div className="content"> 
             </div>
             <div className="chat-input">
-                <input />
+                <div className="input-group">
+                    <input 
+                        className="message-input" 
+                        type="text"
+                        placeholder="Write a message here..."
+                    />
+                    <button className="send-button">Send{' '}<IoIosSend size={15}/></button>
+                </div>
             </div>
         </div>
     )
