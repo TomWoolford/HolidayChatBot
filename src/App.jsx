@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import './App.css'
-import ChatBot from './components/ChatBot'
+import { useState } from 'react';
+import './App.css';
+import ChatBot from './components/ChatBot';
 
 function App() {
   return (

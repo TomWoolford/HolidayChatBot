@@ -17,15 +17,24 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    border: 1px gray;
+    border: none;
+    color: white;
+    background-color: #403d49;
 }
 .header:hover {
     cursor: pointer;
-    background-color: #413057;
+    background-color: #755bb4;
 }
 .header:active {
-    background-color: #413057;
+    background-color: #755bb4;
     transform: translate(-1px, 1px);
+}
+
+.header-light {
+    background-color: #755bb4;
+}
+.header-light:hover {
+    background-color: #403d49;
 }
 
 .content-parent {
