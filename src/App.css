@@ -1,7 +1,22 @@
 .App {
     margin: 0;
-    display: flex;
+    display: grid;
+    max-height: 100vh;
     min-height: 100vh;
     text-align: center;
-    min-width: 100%;
+    min-width: 100vw;
+}
+
+.row {
+    min-height: 50%;
+}
+
+.title {
+    height: 100%;
+    padding: 2rem;
+}
+
+.main-content {
+    height: 100%;
+    display: flex;
 }
