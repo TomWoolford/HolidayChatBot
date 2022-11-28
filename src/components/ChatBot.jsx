@@ -7,8 +7,9 @@ import ChatHeader from './ChatHeader';
 const ChatBot = () => {
     return (
         <ChatContainer>
-            <ChatHeader />
-            <ChatContent />
+            <ChatHeader>
+                <ChatContent />
+            </ChatHeader>
         </ChatContainer>
     )
 }
