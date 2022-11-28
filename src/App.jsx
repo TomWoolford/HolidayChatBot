@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Collapseable from './components/collapse/Collapseable'
+import ChatBot from './components/ChatBot'
 
 function App() {
   return (
-    <div className="App">
-      <div className="title">
+    <div className="App row">
+      <div className="title row">
         <h1>Holiday Chat Protoype</h1>
       </div>
-      <Collapseable />
+      <div className="content">
+        <ChatBot />
+      </div>      
     </div>
   )
 }
