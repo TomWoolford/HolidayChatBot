@@ -8,7 +8,9 @@ const ChatContent = ({ open }) => {
     return (
         <div className="content-parent" ref={contentRef} style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }}>
             <div className="content"> 
-                
+            </div>
+            <div className="chat-input">
+                <input />
             </div>
         </div>
     )
