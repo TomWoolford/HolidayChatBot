@@ -9,11 +9,13 @@
 
 .row {
     min-height: 50%;
+    width: 100%;
+    position: fixed;
 }
 
 .title {
     height: 100%;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .main-content {
