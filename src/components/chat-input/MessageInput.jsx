@@ -6,7 +6,7 @@ const MessageInput = ({ inputState, submit }) => {
     const {userInput, setuserInput} = inputState;
 
     return (
-        <>
+        <div className="input-group">
             <input 
                 className="message-input" 
                 type="text" 
@@ -19,7 +19,7 @@ const MessageInput = ({ inputState, submit }) => {
                 onClick={submit}
             >Send{' '}<IoIosSend size={15}/>
             </button>
-        </>
+        </div>
     )
 }
 

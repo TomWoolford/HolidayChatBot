@@ -8,8 +8,10 @@ const Responses = ({ messages }) => {
     return (
         <> 
             {
-                messages ? messages.map(message => {
-                    return <p>{message.msg}</p>
+                messages ? messages.map((message, idx) => {
+                    return message.key !== "" ?
+                        <p key={`messages-${idx}`} dangerouslySetInnerHTML={{__html: message.msg}} /> :
+                        <p key={`messages-${idx}`}>{message.msg}</p>
                 })
                 : errorMessage
             }
