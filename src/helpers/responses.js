@@ -16,8 +16,16 @@ const errorMessage = new message (
 
 const helpMessage = new message (
     "Try typing one of the below commands or keep an eye out for the keywords in single quotes ' '" +
-    "<p><ul><li>Type 'help' to view this again</li><li>Type 'holiday' to get help finding a holiday</li><li>Type 'joke' for a joke</li></ul></p>",
+    "<ul><li>Type 'help' to view this again</li><li>Type 'holiday' to get help finding a holiday</li><li>Type 'joke' for a joke</li></ul>",
     "help"
+);
+
+const notRecognised = new message (
+    "Ah man! I'm not sure what you're trying to say! 😕 Enter one of the keywords from above or type 'help' for a list of options"
+);
+
+const notImplemented = new message (
+    "💯😜🃏🐱‍👤 I haven't got here yet but hold tight!"
 );
 
 const questions = [
@@ -29,10 +37,20 @@ const questions = [
     new message("Question 5"),
 ];
 
-const getNextMessage = (stage, input) => {
+const fakeAPICall = async () => new Promise(res => setTimeout(res, 2000))
+
+const getNextMessage = async (stage, input) => {
+    await fakeAPICall();
+    const inputTrimed = input.trim();
     // check the stage and if a valid input
     // if yes then return the next question
     if (input.toLowerCase() === "help") return helpMessage;
+
+    if (input.toLowerCase() === "holiday") return checkStageInput(stage, inputTrimed);
+
+    if (input.toLowerCase() === "joke") return notImplemented;
+
+    return notRecognised;
 }
 
 const getNewStage = message => questions.findIndex(x => x.msg === message);

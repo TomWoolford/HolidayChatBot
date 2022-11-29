@@ -41,11 +41,21 @@
     transition: .2s background-color ease-in-out;
 }
 
-.send-button:hover {
+.send-button:hover:not([disabled]) {
     cursor: pointer;
     background-color: #403d49;
 }
 
-.send-button:active {
+.send-button:active:not([disabled]) {
     transform: translateY(1px);
+}
+
+.send-button:disabled {
+    color: #403d49;
+    background-color: #d0cfd4;
+    border: 1px solid;
+}
+
+.message-input:disabled {
+    background-color: #d0cfd4;
 }

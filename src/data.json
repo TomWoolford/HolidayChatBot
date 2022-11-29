@@ -1,0 +1,272 @@
+[
+    {
+      "id": 0,
+      "type": "mild",
+      "country": "Panama",
+      "city": "Bowie",
+      "hotel": "Comvene",
+      "stars": 5,
+      "price": 414.78
+    },
+    {
+      "id": 1,
+      "type": "beach",
+      "country": "Russian Federation",
+      "city": "Bangor",
+      "hotel": "Rodeocean",
+      "stars": 5,
+      "price": 923.45
+    },
+    {
+      "id": 2,
+      "type": "relaxing",
+      "country": "Pakistan",
+      "city": "Gibsonia",
+      "hotel": "Neurocell",
+      "stars": 3,
+      "price": 487.41
+    },
+    {
+      "id": 3,
+      "type": "cold",
+      "country": "Tuvalu",
+      "city": "Noblestown",
+      "hotel": "Isologics",
+      "stars": 3,
+      "price": 936.82
+    },
+    {
+      "id": 4,
+      "type": "sightseeing",
+      "country": "Luxembourg",
+      "city": "Holcombe",
+      "hotel": "Insource",
+      "stars": 5,
+      "price": 993.55
+    },
+    {
+      "id": 5,
+      "type": "mild",
+      "country": "Barbados",
+      "city": "Galesville",
+      "hotel": "Turnling",
+      "stars": 2,
+      "price": 488.99
+    },
+    {
+      "id": 6,
+      "type": "cold",
+      "country": "Philippines",
+      "city": "Albrightsville",
+      "hotel": "Vendblend",
+      "stars": 4,
+      "price": 406.67
+    },
+    {
+      "id": 7,
+      "type": "relaxing",
+      "country": "Japan",
+      "city": "Robinson",
+      "hotel": "Dognosis",
+      "stars": 4,
+      "price": 687.94
+    },
+    {
+      "id": 8,
+      "type": "sightseeing",
+      "country": "Palau",
+      "city": "Sabillasville",
+      "hotel": "Hopeli",
+      "stars": 3,
+      "price": 276.22
+    },
+    {
+      "id": 9,
+      "type": "relaxing",
+      "country": "Antarctica",
+      "city": "Coultervillle",
+      "hotel": "Cubix",
+      "stars": 4,
+      "price": 369.92
+    },
+    {
+      "id": 10,
+      "type": "mild",
+      "country": "French Polynesia",
+      "city": "Harmon",
+      "hotel": "Indexia",
+      "stars": 2,
+      "price": 125.99
+    },
+    {
+      "id": 11,
+      "type": "relaxing",
+      "country": "New Caledonia",
+      "city": "Blende",
+      "hotel": "Zidox",
+      "stars": 5,
+      "price": 654.09
+    },
+    {
+      "id": 12,
+      "type": "hot",
+      "country": "Brunei Darussalam",
+      "city": "Datil",
+      "hotel": "Quonk",
+      "stars": 4,
+      "price": 915.68
+    },
+    {
+      "id": 13,
+      "type": "hot",
+      "country": "Virgin Islands (British)",
+      "city": "Rossmore",
+      "hotel": "Quizka",
+      "stars": 3,
+      "price": 642.15
+    },
+    {
+      "id": 14,
+      "type": "snow",
+      "country": "Namibia",
+      "city": "Lorraine",
+      "hotel": "Geeknet",
+      "stars": 5,
+      "price": 828.83
+    },
+    {
+      "id": 15,
+      "type": "beach",
+      "country": "Denmark",
+      "city": "Chapin",
+      "hotel": "Rugstars",
+      "stars": 5,
+      "price": 180.27
+    },
+    {
+      "id": 16,
+      "type": "relaxing",
+      "country": "Tanzania",
+      "city": "Caledonia",
+      "hotel": "Valpreal",
+      "stars": 4,
+      "price": 154.52
+    },
+    {
+      "id": 17,
+      "type": "relaxing",
+      "country": "Belarus",
+      "city": "Jennings",
+      "hotel": "Sportan",
+      "stars": 4,
+      "price": 708.41
+    },
+    {
+      "id": 18,
+      "type": "adventure",
+      "country": "Guam",
+      "city": "Chelsea",
+      "hotel": "Geologix",
+      "stars": 2,
+      "price": 995.27
+    },
+    {
+      "id": 19,
+      "type": "sightseeing",
+      "country": "Ecuador",
+      "city": "Ironton",
+      "hotel": "Inventure",
+      "stars": 5,
+      "price": 150.76
+    },
+    {
+      "id": 20,
+      "type": "relaxing",
+      "country": "Oman",
+      "city": "Vandiver",
+      "hotel": "Zillar",
+      "stars": 3,
+      "price": 404.82
+    },
+    {
+      "id": 21,
+      "type": "beach",
+      "country": "Seychelles",
+      "city": "Slovan",
+      "hotel": "Teraprene",
+      "stars": 4,
+      "price": 684.34
+    },
+    {
+      "id": 22,
+      "type": "mild",
+      "country": "Reunion",
+      "city": "Mahtowa",
+      "hotel": "Amril",
+      "stars": 4,
+      "price": 669.85
+    },
+    {
+      "id": 23,
+      "type": "snow",
+      "country": "Slovenia",
+      "city": "Wildwood",
+      "hotel": "Capscreen",
+      "stars": 1,
+      "price": 719.68
+    },
+    {
+      "id": 24,
+      "type": "relaxing",
+      "country": "Tonga",
+      "city": "Guilford",
+      "hotel": "Zerology",
+      "stars": 1,
+      "price": 312.69
+    },
+    {
+      "id": 25,
+      "type": "beach",
+      "country": "Solomon Islands",
+      "city": "Conway",
+      "hotel": "Synkgen",
+      "stars": 3,
+      "price": 905.53
+    },
+    {
+      "id": 26,
+      "type": "snow",
+      "country": "Vanuatu",
+      "city": "Helen",
+      "hotel": "Lovepad",
+      "stars": 2,
+      "price": 800.68
+    },
+    {
+      "id": 27,
+      "type": "mild",
+      "country": "Guinea",
+      "city": "Brecon",
+      "hotel": "Quarx",
+      "stars": 2,
+      "price": 131.21
+    },
+    {
+      "id": 28,
+      "type": "hot",
+      "country": "Liberia",
+      "city": "Wells",
+      "hotel": "Utara",
+      "stars": 1,
+      "price": 481.97
+    },
+    {
+      "id": 29,
+      "type": "relaxing",
+      "country": "Venezuela",
+      "city": "Cuylerville",
+      "hotel": "Tropolis",
+      "stars": 1,
+      "price": 205.87
+    }
+  ]

@@ -1,0 +1,45 @@
+.loading {
+    height: 10px;
+    padding: .25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadein ease-in-out .75s;
+}
+
+.circle {
+    background-color: #755bb4;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    animation: squish 1s ease infinite;
+    margin-right: 3px;
+}
+
+.circle:nth-child(1) {
+	animation-delay: 0.333s;
+}
+.circle:nth-child(2) {
+	animation-delay: 0.666s;
+}
+.circle:nth-child(3) {
+	animation-delay: .999s;
+}
+
+@keyframes squish {
+	50% { 
+		transform : scaleY(0.7); 
+		background : #403d49;
+	}
+}
+
+@keyframes fadein {
+    0% {
+        /* transform: translateY(2px); */
+        opacity: 0;
+    }
+    100% {
+        /* transform: translateY(0px); */
+        opacity: 1;
+    }
+}
