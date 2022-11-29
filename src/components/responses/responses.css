@@ -1,0 +1,35 @@
+.message {
+    border: 1px solid #403d49;
+    border-radius: 10px;
+    max-width: 75%;
+    padding: .3rem;
+    margin-bottom: 3px;
+    animation: floatin 1s forwards;
+    color: #f3f1f7;
+}
+
+.bot {
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+    background-color: #403d49;
+    box-shadow: 0px 0px 12px -7px #755bb4;
+    
+}
+
+.user {
+    margin-right: auto;
+    border-bottom-left-radius: 0;
+    background-color: #755bb4;
+    box-shadow: 0px 0px 12px -7px #403d49;
+}
+
+@keyframes floatin {
+    from {
+        transform: translateY(14px);
+        opacity: .0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

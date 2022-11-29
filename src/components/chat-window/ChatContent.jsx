@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MessageInput from '../chat-input/MessageInput';
 import './chat.css';
 import Responses from '../responses/Responses';
-import { questions, getNextMessage, getNewStage } from '../../helpers/responses';
+import { message, questions, getNextMessage, getNewStage } from '../../helpers/responses';
 import { isValidInput } from '../../helpers/helpers'
 
 const ChatContent = ({ open }) => {
@@ -14,10 +14,12 @@ const ChatContent = ({ open }) => {
 
     const handleSubmit = () => {
         if (isValidInput) { // Should send the users input first if valid 
-            const nextMessage = getNextMessage(userStages, userInput.trim());
-            setMessages(() => [...messages, nextMessage]);
 
-            setUserStages.push(getNewStage(nextMessage));
+            setMessages(() => [...messages, new message(userInput.trim(), "", true)]);
+            // const nextMessage = getNextMessage(userStages, userInput.trim());
+            // setMessages(() => [...messages, nextMessage]);
+
+            // setUserStages.push(getNewStage(nextMessage));
         }
         setuserInput('');
     }

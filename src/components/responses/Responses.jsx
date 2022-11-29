@@ -9,9 +9,18 @@ const Responses = ({ messages }) => {
         <> 
             {
                 messages ? messages.map((message, idx) => {
+                    const classname = message.isUser ? "message user" : "message bot";
                     return message.key !== "" ?
-                        <p key={`messages-${idx}`} dangerouslySetInnerHTML={{__html: message.msg}} /> :
-                        <p key={`messages-${idx}`}>{message.msg}</p>
+                        <p 
+                            className={classname}
+                            key={`messages-${idx}`} 
+                            dangerouslySetInnerHTML={{__html: message.msg}} 
+                        /> :
+                        <p 
+                            className={classname}
+                            key={`messages-${idx}`}
+                            >{message.msg}
+                        </p>
                 })
                 : errorMessage
             }
