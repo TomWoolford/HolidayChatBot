@@ -5,6 +5,13 @@ import './chatInput.css';
 const MessageInput = ({ inputState, submit }) => {
     const {userInput, setuserInput} = inputState;
 
+    const checkKey = e => {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        if (e.key === 'Enter' || e.which === 13) submit();
+    }
+
     return (
         <div className="input-group">
             <input 
@@ -13,7 +20,7 @@ const MessageInput = ({ inputState, submit }) => {
                 placeholder="Write a message here..."
                 value={userInput}
                 onChange={(e) => setuserInput(e.target.value)}
-                onSubmit={submit}
+                onKeyUp={checkKey}
             />
             <button 
                 className="send-button"

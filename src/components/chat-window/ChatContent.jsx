@@ -13,8 +13,7 @@ const ChatContent = ({ open }) => {
     const contentRef = useRef(0);
 
     const handleSubmit = () => {
-        if (isValidInput) { // Should send the users input first if valid 
-
+        if (isValidInput) { 
             setMessages(() => [...messages, new message(userInput.trim(), "", true)]);
             // const nextMessage = getNextMessage(userStages, userInput.trim());
             // setMessages(() => [...messages, nextMessage]);
