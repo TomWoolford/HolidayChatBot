@@ -41,8 +41,6 @@ const questions = [
     new Message("Question 5"),
 ]; 
 
-
-
 export { 
     welcomeMessage,
     errorMessage,

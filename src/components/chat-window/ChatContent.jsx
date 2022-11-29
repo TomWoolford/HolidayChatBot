@@ -38,11 +38,14 @@ const ChatContent = ({ open }) => {
                 <Responses messages={messages} />
             </div>
             
-            {loading && <div className="loading">
-                <div className="circle"></div>
-                <div className="circle"></div>
-                <div className="circle"></div>
-            </div>}
+            <div className="loading">
+                {loading && 
+                <>
+                    <div className="circle"></div>
+                    <div className="circle"></div>
+                    <div className="circle"></div>
+                </>}
+            </div>
 
             <div className="chat-input">
                 <div className="input-group">
