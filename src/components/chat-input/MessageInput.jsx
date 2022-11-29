@@ -13,6 +13,7 @@ const MessageInput = ({ inputState, submit }) => {
                 placeholder="Write a message here..."
                 value={userInput}
                 onChange={(e) => setuserInput(e.target.value)}
+                onSubmit={submit}
             />
             <button 
                 className="send-button"
