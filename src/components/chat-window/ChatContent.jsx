@@ -4,7 +4,7 @@ import MessageInput from '../chat-input/MessageInput';
 import './chat.css';
 import './loading.css';
 import Responses from '../responses/Responses';
-import { message, questions } from '../../helpers/responses';
+import { Message, questions } from '../../helpers/responses';
 import { getNextMessage, getNewStage } from '../../helpers/chatHandler';
 import { isValidInput } from '../../helpers/helpers';
 
@@ -19,14 +19,14 @@ const ChatContent = ({ open }) => {
         setLoading(true);
 
         if (isValidInput(userInput)) { 
-            setMessages((prev) => [...prev, new message(userInput.trim(), "", true)]);
+            setMessages((prev) => [...prev, new Message(userInput.trim(), "", true)]);
             setuserInput('');
             
             const nextMessage = await getNextMessage(userStages[userStages.length - 1], userInput.trim());
             setMessages((prev) => [...prev, nextMessage]);
 
             const newStage = getNewStage(nextMessage);
-            if (newStage !== userStages[userStages.length - 1]) 
+            if (newStage > -1 && newStage !== userStages[userStages.length - 1]) 
                 setUserStages((prev) => [...prev, newStage]);
         }
         setLoading(false);
