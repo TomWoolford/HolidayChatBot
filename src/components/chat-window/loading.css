@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: fadein ease-in-out 1s;
+    animation: fadein ease-in-out .75s;
 }
 
 .circle {
