@@ -6,20 +6,21 @@ const MessageInput = ({ inputState, submit }) => {
     const {userInput, setuserInput} = inputState;
 
     return (
-        <>
+        <div className="input-group">
             <input 
                 className="message-input" 
                 type="text" 
                 placeholder="Write a message here..."
                 value={userInput}
                 onChange={(e) => setuserInput(e.target.value)}
+                onSubmit={submit}
             />
             <button 
                 className="send-button"
                 onClick={submit}
             >Send{' '}<IoIosSend size={15}/>
             </button>
-        </>
+        </div>
     )
 }
 
