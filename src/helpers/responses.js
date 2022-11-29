@@ -37,40 +37,16 @@ const questions = [
     new message("Question 5"),
 ];
 
-const fakeAPICall = async () => new Promise(res => setTimeout(res, 2000))
 
-const getNextMessage = async (stage, input) => {
-    await fakeAPICall();
-    const inputTrimed = input.trim();
-    // check the stage and if a valid input
-    // if yes then return the next question
-    if (input.toLowerCase() === "help") return helpMessage;
-
-    if (input.toLowerCase() === "holiday") return checkStageInput(stage, inputTrimed);
-
-    if (input.toLowerCase() === "joke") return notImplemented;
-
-    return notRecognised;
-}
-
-const getNewStage = message => questions.findIndex(x => x.msg === message);
-
-const checkStageInput = (stage, input) => {
-    switch (stage) {
-        case 0: 
-            if (input.toLowerCase() === "yes" || input.toLowerCase() === "no") {
-
-            }
-    }
-}
 
 export { 
     welcomeMessage,
     errorMessage,
+    helpMessage, 
+    notImplemented,
     message, 
     questions,
-    getNextMessage,
-    getNewStage,
+    notRecognised,
  }
 
  // Array of Questions and valid answers
