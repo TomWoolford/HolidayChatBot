@@ -20,8 +20,12 @@ const helpMessage = new message (
     "help"
 );
 
-const notRecognised = new message(
+const notRecognised = new message (
     "Ah man! I'm not sure what you're trying to say! 😕 Enter one of the keywords from above or type 'help' for a list of options"
+);
+
+const notImplemented = new message (
+    "💯😜🃏🐱‍👤 I haven't got here yet but hold tight!"
 );
 
 const questions = [
@@ -37,9 +41,14 @@ const fakeAPICall = async () => new Promise(res => setTimeout(res, 2000))
 
 const getNextMessage = async (stage, input) => {
     await fakeAPICall();
+    const inputTrimed = input.trim();
     // check the stage and if a valid input
     // if yes then return the next question
     if (input.toLowerCase() === "help") return helpMessage;
+
+    if (input.toLowerCase() === "holiday") return checkStageInput(stage, inputTrimed);
+
+    if (input.toLowerCase() === "joke") return notImplemented;
 
     return notRecognised;
 }

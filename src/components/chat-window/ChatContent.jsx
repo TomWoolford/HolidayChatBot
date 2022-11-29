@@ -17,11 +17,14 @@ const ChatContent = ({ open }) => {
             setMessages((prev) => [...prev, new message(userInput.trim(), "", true)]);
             setuserInput('');
             
-            const nextMessage = await getNextMessage(userStages, userInput.trim());
+            const nextMessage = await getNextMessage(userStages[userStages.length - 1], userInput.trim());
 
             setMessages((prev) => [...prev, nextMessage]);
 
-            // setUserStages.push(getNewStage(nextMessage));
+            const newStage = getNewStage(nextMessage);
+
+            if (newStage !== userStages[userStages.length - 1]) 
+                setUserStages((prev) => [...prev, newStage]);
         }
         setuserInput('');
     }
