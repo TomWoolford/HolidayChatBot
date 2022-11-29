@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { errorMessage } from '../../helpers/responses';
 import './responses.css';
 
@@ -16,7 +16,7 @@ const Responses = ({ messages }) => {
         <> 
             {
                 messages ? messages.map((message, idx) => {
-                    const cssClass = message.isUser ? "message user" : "message bot";
+                    const cssClass = message.isUser ? `message user ${message.key}` : `message bot ${message.key}`;
                     return message.key !== "" ?
                         <p 
                             className={cssClass}

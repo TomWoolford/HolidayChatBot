@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import MessageInput from '../chat-input/MessageInput';
 import './chat.css';
@@ -12,11 +12,14 @@ const ChatContent = ({ open }) => {
     const [messages, setMessages] = useState([questions[0]]);
     const contentRef = useRef(0);
 
-    const handleSubmit = () => {
-        if (isValidInput) { 
-            setMessages(() => [...messages, new message(userInput.trim(), "", true)]);
-            // const nextMessage = getNextMessage(userStages, userInput.trim());
-            // setMessages(() => [...messages, nextMessage]);
+    const handleSubmit = async () => { 
+        if (isValidInput(userInput)) { 
+            setMessages((prev) => [...prev, new message(userInput.trim(), "", true)]);
+            setuserInput('');
+            
+            const nextMessage = await getNextMessage(userStages, userInput.trim());
+
+            setMessages((prev) => [...prev, nextMessage]);
 
             // setUserStages.push(getNewStage(nextMessage));
         }
