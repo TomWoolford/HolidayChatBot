@@ -30,12 +30,12 @@ const notImplemented = new message (
 
 const questions = [
     welcomeMessage,
-    new message("Question 1"),
-    new message("Question 2"),
-    new message("Question 3"),
-    new message("Question 4"),
+    new message("Let's find you a holiday! 🏝😎 First off, would you prefer a 'hot', 'cold', 'mild', 'relaxing', 'snow', 'adventure' or 'beach' holiday?"),
+    new message("Ok, do you like to cook? 👩‍🍳 Which board would you choose; 'full', 'half' or 'none'?"),
+    new message("All right then, how many ⭐s does your hotel need to have? '1', '2', '3', '4' or '5'? You can enter more than one value, seperateed by a space 🙂"),
+    new message("Finally, please enter a price range 💲! Please ensure you enter two numbers between 100 and 1000, seperated by a dash - e.g. 150-450"),
     new message("Question 5"),
-];
+]; // Price range 100 - 1000
 
 
 

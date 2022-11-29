@@ -15,17 +15,22 @@ const getNextMessage = async (stage, input) => {
     return notRecognised;
 }
 
-const getNewStage = message => questions.findIndex(x => x.msg === message);
+const getNewStage = message => questions.findIndex(x => x.msg === message.msg);
 
 const checkStageInput = (stage, input) => {
     switch (stage) {
         case 0: // display question 1 
             return questions[1];
+        case 1: 
+            // Check for the answers 
+            // Make sure we have a valid answer
+            // Store it somewhere 
+            // if we good, carry on my wayward son
     }
 }
 
 const getKeyWords = () => {
-    //'(.*?)' - regex for anything in ''
+    //'(\w*?)' - regex for anything in ''
 }
 
 export {
