@@ -2,7 +2,10 @@ import { questions,
     invalidNumber, 
     helpMessage, 
     notImplemented, 
-    notRecognised } from "./responses";
+    notRecognised,
+    noResults,
+    partialMatches,
+} from "./responses";
 import { Answer, Message } from "./classes";
 
 const answer = new Answer();
@@ -41,7 +44,7 @@ const calculateResults = async () => {
 
 const generateMatchList = (matches) => {
     if (matches.length === 0) {
-        return [new Message("We're so sorry but your preferences had no exact matches 😢")];
+        return [noResults];
     }
     // need to add a 0 check and then handle partial returns
     const firstMessage = new Message(`We found <span>${matches.length}</span> exact matches!`, "matches");
@@ -70,7 +73,7 @@ const generateMatchList = (matches) => {
         );
     });
 
-    return [firstMessage, ...results];
+    return [firstMessage, ...results, partialMatches];
 }
 
 const getAdjective = type => {

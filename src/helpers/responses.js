@@ -26,6 +26,14 @@ const notImplemented = new Message (
     "💯😜🃏🐱‍👤 I haven't got here yet but hold tight!"
 );
 
+const noResults = new Message (
+    "We're so sorry but your preferences had no exact matches 😢 Why not try typing 'price', 'board', 'stars' or 'type' to view the matches to your individual preferences."
+);
+
+const partialMatches = new Message (
+    "We hope you are satisfied with your results 😎 If not try typing 'price', 'board', 'stars' or 'type' to view the matches to your individual preferences."
+);
+
 const questions = [
     welcomeMessage,
     new Message("Let's find you a holiday! 🏝😎 First off, would you prefer a 'hot', 'cold', 'mild', 'relaxing', 'snow', 'adventure' or 'beach' holiday?"),
@@ -43,4 +51,6 @@ export {
     questions,
     notRecognised,
     invalidNumber,
+    noResults, 
+    partialMatches,
  }
