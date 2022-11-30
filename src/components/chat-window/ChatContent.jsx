@@ -2,12 +2,13 @@ import { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import MessageInput from '../chat-input/MessageInput';
 import './chat.css';
-import './loading.css';
+import '../loading/loading.css';
 import Responses from '../responses/Responses';
 import { questions } from '../../helpers/responses';
 import { Message } from '../../helpers/classes';
 import { getNextMessage, getNewStage } from '../../helpers/chatHandler';
 import { isValidInput } from '../../helpers/helpers';
+import Loading from '../loading/Loading';
 
 const ChatContent = ({ open }) => {
     const [userInput, setuserInput] = useState('');
@@ -40,12 +41,7 @@ const ChatContent = ({ open }) => {
             </div>
             
             <div className="loading">
-                {loading && 
-                <div className="loading-animate">
-                    <div className="circle"></div>
-                    <div className="circle"></div>
-                    <div className="circle"></div>
-                </div>}
+                {loading && <Loading />}
             </div>
 
             <div className="chat-input">

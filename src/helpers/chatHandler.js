@@ -48,7 +48,6 @@ const checkStageInput = (stage, input) => {
             const upper = Math.max(...inputsConverted);
 
             const nums = input.split(/[\s|-]/g).filter(num => {return num !== ' ' && num !== ''});
-            console.log(nums)
             const values = [...new Set(nums.map(num => parseInt(num)))]; // Remove duplicates
 
             if (!values.some(value => isNaN(value)) || values.length === 0) {
