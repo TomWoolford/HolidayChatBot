@@ -31,7 +31,7 @@ const questions = [
     new Message("Let's find you a holiday! 🏝😎 First off, would you prefer a 'hot', 'cold', 'mild', 'relaxing', 'snow', 'adventure' or 'beach' holiday?"),
     new Message("Ok, do you like to cook? 👩‍🍳 Which board would you choose; 'full', 'half' or 'none'?"),
     new Message("All right then, how many ⭐s does your hotel need to have? '1', '2', '3', '4' or '5'? You can enter more than one value, seperateed by a space 🙂"),
-    new Message("Finally, please enter a price range 💲! Please ensure you enter two numbers between 100 and 1000, seperated by a dash - e.g. 150-450"),
+    new Message("Finally, please enter a price range 💲! You can enter one number; a maximum price, or two numbers as a price range. Please ensure the numbers are between '100' and '1000', seperated by a dash - e.g. 150 - 450"),
     new Message("Question 5"),
 ]; 
 
@@ -44,10 +44,3 @@ export {
     notRecognised,
     invalidNumber,
  }
-
- // Array of Questions and valid answers
- // check user input and move stage if valid
- // Keep array of stages in responses.jsx
- // Add new stage each time
- // Can go back by 1
- // Use stage array to get the correct question

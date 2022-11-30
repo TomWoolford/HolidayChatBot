@@ -42,16 +42,19 @@ const checkStageInput = (stage, input) => {
             return notRecognised;
         case 3:
         case 4: // stars and price
-            const nums = input.split(/[\s|-]/g);
+            const validInputs = getKeyWords(questions[stage].msg);
+            const inputsConverted = validInputs.map(input => parseInt(input)); // Assumes a properly formed question with '' with a valid number inside - should try - catch in production
+            const lower = Math.min(...inputsConverted); 
+            const upper = Math.max(...inputsConverted);
+
+            const nums = input.split(/[\s|-]/g).filter(num => {return num !== ' ' && num !== ''});
+            console.log(nums)
             const values = [...new Set(nums.map(num => parseInt(num)))]; // Remove duplicates
 
-            if (!values.some(value => isNaN(value))) {
-                if (stage === 3 && !values.some(value => value < 0 || value > 5)) {
-                    answer.stars = values;
-                    return questions[++stage];
-                }
-                if (stage === 4 && !values.some(value => value < 100 || value > 1000) && values.length === 2) {
-                    answer.price = values;
+            if (!values.some(value => isNaN(value)) || values.length === 0) {
+                if ((!values.some(value => value < lower || value > upper)) || (stage === 4 && values.length > 2)) {
+                    const key = stage === 3 ? "stars" : "price";
+                    answer[key] = values;
                     return questions[++stage];
                 }
             }
