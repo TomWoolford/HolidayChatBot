@@ -3,108 +3,10 @@ import { questions,
     helpMessage, 
     notImplemented, 
     notRecognised,
-    noResults,
     partialMatches,
 } from "./responses";
-import { Answer, Message } from "./classes";
-
-const answer = new Answer();
-const matches = {
-    typeMatches: [],
-    boardMatches: [],
-    priceMatches: [],
-    starsMatches: [],
-}
-
-const fakeAPICall = async s => new Promise(res => setTimeout(res, s));
-
-const calculateResults = async () => {
-    // Should validate answer here and get an answer to any blank questions
-    const { _type: type, _board: board, _price: price, _stars: stars } = answer;
-
-    await fakeAPICall(1500);
-    const allHolidays = await fetch('/data.json', {
-            headers: {
-                "Content-Type": "application/json",
-                "Accept": "application/json"
-            },
-    });
-    const holidaydata = await allHolidays.json();
-
-    matches.typeMatches = holidaydata.filter(hol => hol.type === type);
-    matches.boardMatches = holidaydata.filter(hol => hol.board === board);
-    matches.priceMatches = holidaydata.filter(hol => {
-        return [...price].length === 1 ? hol.price <= price : hol.price >= price[0] && hol.price <= price[1];
-    });
-    matches.starsMatches = holidaydata.filter(hol => [...stars].some(star => star === hol.stars));
-
-    const allMatches = [...matches.typeMatches, ...matches.boardMatches, ...matches.priceMatches, ...matches.starsMatches];
-    const bestMatches = matches.priceMatches.filter(match => {
-        return match.type === type && match.board === board && [...stars].some(star => star === match.stars);
-    })
-
-    return generateMatchList(bestMatches);
-}
-
-const generateMatchList = (matches, isPartial = false, type = "") => {
-    if (matches.length === 0) {
-        return [noResults];
-    }
-    
-    const firstMessage = new Message(
-        `We found <span>${matches.length}</span> ${!isPartial ? 'exact' : ''} matches${!isPartial ? '!' : ` for your ${type} preference.`}`, 
-        "matches"
-    );
-    const results = matches.map(res => {
-        return new Message(
-            `<a href="#">The ${getAdjective(res.type)} ${res.city} city in ${res.country}</a> 
-            <table class="result-table">
-                <tr>
-                    <th>Hotel</th>
-                    <td>${res.hotel}</td>
-                </tr>
-                <tr>
-                    <th>Stars</th>
-                    <td>${'⭐'.repeat(res.stars)}</td>
-                </tr>
-                <tr>
-                    <th>Board</th>
-                    <td>${res.board}</td>
-                </tr>
-                <tr>
-                    <th>Price</th>
-                    <td>£${res.price}</td>
-                </tr>
-            </table>`,
-            "result"
-        );
-    });
-
-    return [firstMessage, ...results, partialMatches];
-}
-
-const getAdjective = type => {
-    switch (type) {
-        case 'hot':
-            return 'sunny';
-        case 'cold':
-            return 'frosty';
-        case 'adventure':
-            return 'exciting';
-        case 'relaxing':
-            return 'tranquil';
-        case 'beach':
-            return 'carefree';
-        case 'snow':
-            return 'majestic';
-        case 'mild':
-            return 'temperate'
-        case 'sightseeing':
-            return 'beautiful';
-        default:
-            return 'incredible';
-    }
-}
+import { answer, matches, calculateResults, generateMatchList, clearAll } from "./resultHandler";
+import { getKeyWords, fakeAPICall } from "./helpers";
 
 const getNextMessage = async (stage, input) => {
     await fakeAPICall(1000); // To simulate a call to a db
@@ -171,29 +73,15 @@ const checkStageInput = (stage, input) => {
 }
 
 const getPartialList = (input) => {
-    const keys = ['type', 'board', 'stars', 'price'];
+    const keys = getKeyWords(partialMatches.msg);
     if (keys.some(key => key === input))
         return generateMatchList(matches[`${input}Matches`], true, input);
 
     return notRecognised;
 }
 
-const getKeyWords = msg => [...msg.matchAll(/'(\w*?)'/g)].map(match => match[1]);
-
-const getFirstResponse = () => questions[0];
-
-const clearAll = () => {
-    answer.reset();
-    
-    matches.typeMatches = [];
-    matches.boardMatches = [];
-    matches.priceMatches = [];
-    matches.starsMatches = [];
-}
-
 export {
     getNextMessage,
     getNewStage,
-    getFirstResponse,
     calculateResults,
 }

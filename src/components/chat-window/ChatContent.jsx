@@ -5,8 +5,8 @@ import './chat.css';
 import '../loading/loading.css';
 import Responses from '../responses/Responses';
 import { Message } from '../../helpers/classes';
-import { getNextMessage, getNewStage, getFirstResponse, calculateResults } from '../../helpers/chatHandler';
-import { isValidInput } from '../../helpers/helpers';
+import { getNextMessage, getNewStage, calculateResults } from '../../helpers/chatHandler';
+import { isValidInput, getFirstResponse } from '../../helpers/helpers';
 import Loading from '../loading/Loading';
 
 const ChatContent = ({ open }) => {
@@ -22,6 +22,7 @@ const ChatContent = ({ open }) => {
         if (isValidInput(userInput)) { 
             if (userStages[userStages.length - 1] === 5) {
                 await getResults(userStages[userStages.length - 1], userInput);
+                setuserInput('');
                 setLoading(false);
                 return;
             }

@@ -28,11 +28,11 @@ const notImplemented = new Message (
 );
 
 const noResults = new Message (
-    "We're so sorry but your preferences had no exact matches 😢 Why not try typing 'price', 'board', 'stars' or 'type' to view the matches to your individual preferences."
+    "We're so sorry but your preferences had no exact matches 😢 Why not try typing 'price', 'board', 'stars', 'type' or 'all' to view the matches to your individual preferences."
 );
 
 const partialMatches = new Message (
-    "We hope you are satisfied with your results 😎 If not try typing 'price', 'board', 'stars' or 'type' to view the matches to your individual preferences."
+    "We hope you are satisfied with your results 😎 If not try typing 'price', 'board', 'stars', 'type' or 'all' to view the matches to your individual preferences."
 );
 
 const questions = [
