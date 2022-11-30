@@ -32,7 +32,7 @@ const questions = [
     new Message("Ok, do you like to cook? 👩‍🍳 Which board would you choose; 'full', 'half' or 'none'?"),
     new Message("All right then, how many ⭐s does your hotel need to have? '1', '2', '3', '4' or '5'? You can enter more than one value, seperateed by a space 🙂"),
     new Message("Finally, please enter a price range 💲! You can enter one number; a maximum price, or two numbers as a price range. Please ensure the numbers are between '100' and '1000', seperated by a dash - e.g. 150 - 450"),
-    new Message("Question 5"),
+    new Message("Awesome! Thank you for completing the questionnaire 😊 Give us a second to calculate your best matches! 🧮"),
 ]; 
 
 export { 
