@@ -2,16 +2,17 @@ import { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import MessageInput from '../chat-input/MessageInput';
 import './chat.css';
-import './loading.css';
+import '../loading/loading.css';
 import Responses from '../responses/Responses';
-import { Message, questions } from '../../helpers/responses';
-import { getNextMessage, getNewStage } from '../../helpers/chatHandler';
+import { Message } from '../../helpers/classes';
+import { getNextMessage, getNewStage, getFirstResponse, calculateResults } from '../../helpers/chatHandler';
 import { isValidInput } from '../../helpers/helpers';
+import Loading from '../loading/Loading';
 
 const ChatContent = ({ open }) => {
     const [userInput, setuserInput] = useState('');
     const [userStages, setUserStages] = useState([0]);
-    const [messages, setMessages] = useState([questions[0]]);
+    const [messages, setMessages] = useState([getFirstResponse()]);
     const [loading, setLoading] = useState(false);
     const contentRef = useRef(0);
 
@@ -19,6 +20,12 @@ const ChatContent = ({ open }) => {
         setLoading(true);
 
         if (isValidInput(userInput)) { 
+            if (userStages[userStages.length - 1] === 5) {
+                await getResults(userStages[userStages.length - 1], userInput);
+                setLoading(false);
+                return;
+            }
+
             setMessages((prev) => [...prev, new Message(userInput.trim(), "", true)]);
             setuserInput('');
             
@@ -28,23 +35,32 @@ const ChatContent = ({ open }) => {
             const newStage = getNewStage(nextMessage);
             if (newStage > -1 && newStage !== userStages[userStages.length - 1]) 
                 setUserStages((prev) => [...prev, newStage]);
+
+            if (newStage === 5) {
+                const results = await calculateResults();
+                setMessages((prev) => [...prev, ...results]);
+            }
         }
         setLoading(false);
     }
 
+    const getResults = async (stage, input) => {
+        const results = await getNextMessage(stage, input);
+        setMessages((prev) => [...prev, ...results]);
+    }
+
     return (
-        <div className="content-parent" ref={contentRef} style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }}>
+        <div 
+            className="content-parent" 
+            ref={contentRef} 
+            style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }}
+        >
             <div className="content"> 
                 <Responses messages={messages} />
             </div>
             
             <div className="loading">
-                {loading && 
-                <>
-                    <div className="circle"></div>
-                    <div className="circle"></div>
-                    <div className="circle"></div>
-                </>}
+                {loading && <Loading />}
             </div>
 
             <div className="chat-input">

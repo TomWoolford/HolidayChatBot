@@ -3,8 +3,6 @@
     padding: .25rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    animation: fadein ease-in-out .75s;
 }
 
 .circle {
@@ -26,6 +24,11 @@
 	animation-delay: .999s;
 }
 
+.loading-animate {
+    animation: fadein ease-in .75s;
+    display: flex;
+}
+
 @keyframes squish {
 	50% { 
 		transform : scaleY(0.7); 
@@ -35,11 +38,9 @@
 
 @keyframes fadein {
     0% {
-        /* transform: translateY(2px); */
         opacity: 0;
     }
     100% {
-        /* transform: translateY(0px); */
         opacity: 1;
     }
 }

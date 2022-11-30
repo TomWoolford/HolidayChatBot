@@ -22,6 +22,7 @@ const MessageInput = ({ inputState, submit, loading }) => {
                 onChange={(e) => setuserInput(e.target.value)}
                 onKeyUp={checkKey}
                 disabled={loading}
+                autoFocus={loading}
             />
             <button 
                 className="send-button"

@@ -1,10 +1,4 @@
-class Message {
-    constructor(msg, key = "", isUser = false) {
-        this.msg = msg;
-        this.key = key;
-        this.isUser = isUser;
-    }
-}
+import { Message } from "./classes";
 
 const welcomeMessage = new Message (
     "Welcome! 😊 How can we help you today? Type 'help' for a list of options, or type 'holiday' to begin.",
@@ -16,7 +10,8 @@ const errorMessage = new Message (
 
 const helpMessage = new Message (
     "Try typing one of the below commands or keep an eye out for the keywords in single quotes ' '" +
-    "<ul><li>Type 'help' to view this again</li><li>Type 'holiday' to get help finding a holiday</li><li>Type 'joke' for a joke</li></ul>",
+    "<ul><li>Type 'help' to view this again</li><li>Type 'holiday' to get help finding a holiday</li><li>Type 'joke' for a joke</li>" +
+    "<li>Type 'repeat' to view the current question</li><li>Type 'restart' to start over</li></ul>",
     "help"
 ); // Add back, repeat?
 
@@ -32,13 +27,21 @@ const notImplemented = new Message (
     "💯😜🃏🐱‍👤 I haven't got here yet but hold tight!"
 );
 
+const noResults = new Message (
+    "We're so sorry but your preferences had no exact matches 😢 Why not try typing 'price', 'board', 'stars' or 'type' to view the matches to your individual preferences."
+);
+
+const partialMatches = new Message (
+    "We hope you are satisfied with your results 😎 If not try typing 'price', 'board', 'stars' or 'type' to view the matches to your individual preferences."
+);
+
 const questions = [
     welcomeMessage,
     new Message("Let's find you a holiday! 🏝😎 First off, would you prefer a 'hot', 'cold', 'mild', 'relaxing', 'snow', 'adventure' or 'beach' holiday?"),
     new Message("Ok, do you like to cook? 👩‍🍳 Which board would you choose; 'full', 'half' or 'none'?"),
     new Message("All right then, how many ⭐s does your hotel need to have? '1', '2', '3', '4' or '5'? You can enter more than one value, seperateed by a space 🙂"),
-    new Message("Finally, please enter a price range 💲! Please ensure you enter two numbers between 100 and 1000, seperated by a dash - e.g. 150-450"),
-    new Message("Question 5"),
+    new Message("Finally, please enter a price range 💲! You can enter one number; a maximum price, or two numbers as a price range. Please ensure the numbers are between '100' and '1000', seperated by a dash - e.g. 150 - 450"),
+    new Message("Awesome! Thank you for completing the questionnaire 😊 Give us a second to calculate your best matches! 🧮"),
 ]; 
 
 export { 
@@ -46,15 +49,9 @@ export {
     errorMessage,
     helpMessage, 
     notImplemented,
-    Message, 
     questions,
     notRecognised,
     invalidNumber,
+    noResults, 
+    partialMatches,
  }
-
- // Array of Questions and valid answers
- // check user input and move stage if valid
- // Keep array of stages in responses.jsx
- // Add new stage each time
- // Can go back by 1
- // Use stage array to get the correct question

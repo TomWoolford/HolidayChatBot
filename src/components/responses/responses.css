@@ -27,6 +27,19 @@
     text-align: left;
 }
 
+.matches span {
+    color: rgb(67, 232, 67);
+}
+
+.result {
+    text-align: left;
+}
+.result td {
+    padding-left: 1rem;
+}
+.result a {
+    color: inherit;
+}
 @keyframes floatin {
     from {
         transform: translateY(14px);
