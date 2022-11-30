@@ -3,33 +3,7 @@ import { questions,
     helpMessage, 
     notImplemented, 
     notRecognised } from "./responses";
-
-class Answer {    
-    /**
-     * @param {string} type
-     */
-    set type(type) {
-        this._type = type;
-    }
-    /**
-     * @param {string} board
-     */
-    set board(board) {
-        this._board = board;
-    }
-    /**
-     * @param {number[]} stars
-     */
-    set stars(stars) {
-        this._stars = stars;
-    }
-    /**
-     * @param {number[]} price
-     */
-    set price(price) {
-        this._price = price;
-    }
-};
+import { Answer } from "./classes";
 
 const answer = new Answer();
 

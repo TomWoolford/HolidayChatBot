@@ -4,7 +4,8 @@ import MessageInput from '../chat-input/MessageInput';
 import './chat.css';
 import './loading.css';
 import Responses from '../responses/Responses';
-import { Message, questions } from '../../helpers/responses';
+import { questions } from '../../helpers/responses';
+import { Message } from '../../helpers/classes';
 import { getNextMessage, getNewStage } from '../../helpers/chatHandler';
 import { isValidInput } from '../../helpers/helpers';
 
@@ -40,11 +41,11 @@ const ChatContent = ({ open }) => {
             
             <div className="loading">
                 {loading && 
-                <>
+                <div className="loading-animate">
                     <div className="circle"></div>
                     <div className="circle"></div>
                     <div className="circle"></div>
-                </>}
+                </div>}
             </div>
 
             <div className="chat-input">

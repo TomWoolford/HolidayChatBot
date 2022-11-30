@@ -1,10 +1,4 @@
-class Message {
-    constructor(msg, key = "", isUser = false) {
-        this.msg = msg;
-        this.key = key;
-        this.isUser = isUser;
-    }
-}
+import { Message } from "./classes";
 
 const welcomeMessage = new Message (
     "Welcome! 😊 How can we help you today? Type 'help' for a list of options, or type 'holiday' to begin.",
@@ -46,7 +40,6 @@ export {
     errorMessage,
     helpMessage, 
     notImplemented,
-    Message, 
     questions,
     notRecognised,
     invalidNumber,
