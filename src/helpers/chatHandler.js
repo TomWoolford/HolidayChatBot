@@ -114,6 +114,13 @@ const getNextMessage = async (stage, input) => {
 
     if (inputTrimed === "joke") return notImplemented;
 
+    if (inputTrimed === "repeat" && stage !== 5) return questions[stage];
+
+    if (inputTrimed === "restart") {
+        clearAll();
+        return questions[0];
+    }
+
     if (stage === 5) return getPartialList(input);
 
     if (inputTrimed === "holiday" || stage > 0) return checkStageInput(stage, inputTrimed);
@@ -174,6 +181,15 @@ const getPartialList = (input) => {
 const getKeyWords = msg => [...msg.matchAll(/'(\w*?)'/g)].map(match => match[1]);
 
 const getFirstResponse = () => questions[0];
+
+const clearAll = () => {
+    answer.reset();
+    
+    matches.typeMatches = [];
+    matches.boardMatches = [];
+    matches.priceMatches = [];
+    matches.starsMatches = [];
+}
 
 export {
     getNextMessage,

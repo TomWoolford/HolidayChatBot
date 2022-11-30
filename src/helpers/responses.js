@@ -10,7 +10,8 @@ const errorMessage = new Message (
 
 const helpMessage = new Message (
     "Try typing one of the below commands or keep an eye out for the keywords in single quotes ' '" +
-    "<ul><li>Type 'help' to view this again</li><li>Type 'holiday' to get help finding a holiday</li><li>Type 'joke' for a joke</li></ul>",
+    "<ul><li>Type 'help' to view this again</li><li>Type 'holiday' to get help finding a holiday</li><li>Type 'joke' for a joke</li>" +
+    "<li>Type 'repeat' to view the current question</li><li>Type 'restart' to start over</li></ul>",
     "help"
 ); // Add back, repeat?
 

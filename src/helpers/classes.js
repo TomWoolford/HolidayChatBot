@@ -31,6 +31,13 @@ class Answer {
     set price(price) {
         this._price = price;
     }
+
+    reset() {
+        this._board = "";
+        this._price = [];
+        this._stars = [];
+        this._type = "";
+    }
 };
 
 export { Message, Answer }
