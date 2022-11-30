@@ -8,7 +8,6 @@ const ChatHeader = ({ content: Content }) => {
 
     const handleClick = (event) => {
         event.target.classList.toggle('header-light');
-
         setOpen(() => !open);
     }
 
