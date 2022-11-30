@@ -5,8 +5,8 @@ import './chat.css';
 import '../loading/loading.css';
 import Responses from '../responses/Responses';
 import { Message } from '../../helpers/classes';
-import { getNextMessage, getNewStage, calculateResults } from '../../helpers/chatHandler';
-import { isValidInput, getFirstResponse } from '../../helpers/helpers';
+import { getNextMessage, calculateResults } from '../../helpers/chatHandler';
+import { isValidInput, getFirstResponse, getNewStage } from '../../helpers/helpers';
 import Loading from '../loading/Loading';
 
 const ChatContent = ({ open }) => {
@@ -20,6 +20,9 @@ const ChatContent = ({ open }) => {
         setLoading(true);
 
         if (isValidInput(userInput)) { 
+            if (userInput === 'restart') {
+                setMessages([]);
+            }
             if (userStages[userStages.length - 1] === 5) {
                 await getResults(userStages[userStages.length - 1], userInput);
                 setuserInput('');
@@ -31,9 +34,9 @@ const ChatContent = ({ open }) => {
             setuserInput('');
             
             const nextMessage = await getNextMessage(userStages[userStages.length - 1], userInput.trim());
-            setMessages((prev) => [...prev, nextMessage]);
+            setMessages((prev) => [...prev, ...nextMessage]);
 
-            const newStage = getNewStage(nextMessage);
+            const newStage = getNewStage(nextMessage[0]);
             if (newStage > -1 && newStage !== userStages[userStages.length - 1]) 
                 setUserStages((prev) => [...prev, newStage]);
 

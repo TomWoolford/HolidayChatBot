@@ -6,6 +6,8 @@ const fakeAPICall = async s => new Promise(res => setTimeout(res, s));
 
 const getKeyWords = msg => [...msg.matchAll(/'(\w*?)'/g)].map(match => match[1]);
 
+const getNewStage = message => questions.findIndex(x => x.msg === message.msg);
+
 const getFirstResponse = () => questions[0];
 
 const getAdjective = type => {
@@ -35,6 +37,7 @@ export {
     isValidInput,
     fakeAPICall,
     getKeyWords,
+    getNewStage,
     getFirstResponse,
     getAdjective
 };
