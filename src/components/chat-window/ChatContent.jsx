@@ -20,6 +20,12 @@ const ChatContent = ({ open }) => {
         setLoading(true);
 
         if (isValidInput(userInput)) { 
+            if (userStages[userStages.length - 1] === 5) {
+                await getResults(userStages[userStages.length - 1], userInput);
+                setLoading(false);
+                return;
+            }
+
             setMessages((prev) => [...prev, new Message(userInput.trim(), "", true)]);
             setuserInput('');
             
@@ -36,6 +42,11 @@ const ChatContent = ({ open }) => {
             }
         }
         setLoading(false);
+    }
+
+    const getResults = async (stage, input) => {
+        const results = await getNextMessage(stage, input);
+        setMessages((prev) => [...prev, ...results]);
     }
 
     return (

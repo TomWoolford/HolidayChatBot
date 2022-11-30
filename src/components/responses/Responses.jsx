@@ -5,11 +5,17 @@ import './responses.css';
 
 const Responses = ({ messages }) => { 
     const hiddenRef = useRef(0);
+    const resultStartRef = useRef(0);
     
     useEffect(() => {
+        if (resultStartRef && resultStartRef.current)
+            return scroll(resultStartRef.current);
+
         if (hiddenRef && hiddenRef.current) 
-            hiddenRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return scroll(hiddenRef.current);
     }, [messages]);
+
+    const scroll = curr => curr.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
     // Will need to look into memo so it doesn't re-render everything 
     return (
