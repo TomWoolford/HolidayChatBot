@@ -37,7 +37,9 @@
 .result td {
     padding-left: 1rem;
 }
-
+.result a {
+    color: inherit;
+}
 @keyframes floatin {
     from {
         transform: translateY(14px);
