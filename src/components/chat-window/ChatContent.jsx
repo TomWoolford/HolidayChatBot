@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import MessageInput from '../chat-input/MessageInput';
 import './chat.css';
@@ -15,6 +15,8 @@ const ChatContent = ({ open }) => {
     const [messages, setMessages] = useState([getFirstResponse()]);
     const [loading, setLoading] = useState(false);
     const contentRef = useRef(0);
+
+    const memoMessages = useMemo(() => messages, [messages]);
 
     const handleSubmit = async () => { 
         setLoading(true);
@@ -60,7 +62,7 @@ const ChatContent = ({ open }) => {
             style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }}
         >
             <div className="content"> 
-                <Responses messages={messages} />
+                <Responses messages={memoMessages} />
             </div>
             
             <div className="loading">

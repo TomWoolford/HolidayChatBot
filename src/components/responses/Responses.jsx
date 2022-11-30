@@ -18,7 +18,6 @@ const Responses = ({ messages }) => {
 
     const scroll = curr => curr.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-    // Will need to look into memo so it doesn't re-render everything 
     return (
         <> 
             {
@@ -48,4 +47,4 @@ Responses.propTypes = {
     messages: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default Responses;
+export default React.memo(Responses);
