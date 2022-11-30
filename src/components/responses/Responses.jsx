@@ -6,6 +6,7 @@ import './responses.css';
 const Responses = ({ messages }) => { 
     const hiddenRef = useRef(0);
     const resultStartRef = useRef(0);
+    const redundantRef = useRef(0);
     
     useEffect(() => {
         if (resultStartRef && resultStartRef.current)
@@ -15,7 +16,7 @@ const Responses = ({ messages }) => {
             return scroll(hiddenRef.current);
     }, [messages]);
 
-    const scroll = curr => curr.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const scroll = curr => curr.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
     // Will need to look into memo so it doesn't re-render everything 
     return (
@@ -25,6 +26,7 @@ const Responses = ({ messages }) => {
                     const cssClass = message.isUser ? `message user ${message.key}` : `message bot ${message.key}`;
                     return message.key !== "" ?
                         <p 
+                            ref={message.key === "matches" ? resultStartRef : redundantRef}
                             className={cssClass}
                             key={`messages-${idx}`} 
                             dangerouslySetInnerHTML={{__html: message.msg}} 
