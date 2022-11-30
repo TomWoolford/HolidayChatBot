@@ -12,10 +12,10 @@ const matches = {
 }
 
 const calculateResults = async () => {
-    // Should validate answer here and get an answer to any blank questions
     const { _type: type, _board: board, _price: price, _stars: stars } = answer;
 
     await fakeAPICall(1500);
+    // Get fake data from json file
     const allHolidays = await fetch('/data.json', {
             headers: {
                 "Content-Type": "application/json",
@@ -24,6 +24,7 @@ const calculateResults = async () => {
     });
     const holidaydata = await allHolidays.json();
 
+    // update match object with relevant filters
     matches.typeMatches = holidaydata.filter(hol => hol.type === type);
     matches.boardMatches = holidaydata.filter(hol => hol.board === board);
     matches.priceMatches = holidaydata.filter(hol => {

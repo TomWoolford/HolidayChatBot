@@ -80,5 +80,4 @@ const getPartialList = (input) => {
 
 export {
     getNextMessage,
-    calculateResults,
 }
