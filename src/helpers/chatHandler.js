@@ -3,7 +3,7 @@ import { questions,
     helpMessage, 
     notImplemented, 
     notRecognised } from "./responses";
-import { Answer } from "./classes";
+import { Answer, Message } from "./classes";
 
 const answer = new Answer();
 
@@ -13,7 +13,7 @@ const calculateResults = async () => {
     // Should validate answer here and get an answer to any blank questions
     const { _type: type, _board: board, _price: price, _stars: stars } = answer;
 
-    await fakeAPICall(2500);
+    await fakeAPICall(1500);
     const allHolidays = await fetch('/data.json', {
             headers: {
                 "Content-Type": "application/json",
@@ -35,6 +35,65 @@ const calculateResults = async () => {
     })
 
     console.log({allMatches, bestMatches});
+
+    return generateMatchList(bestMatches);
+}
+
+const generateMatchList = (matches) => {
+    if (matches.length === 0) {
+        return [new Message("We're so sorry but your preferences had no exact matches 😢")];
+    }
+    // need to add a 0 check and then handle partial returns
+    const firstMessage = new Message(`We found <span>${matches.length}</span> exact matches!`, "matches");
+    const results = matches.map(res => {
+        return new Message(
+            `<a href="#">The ${getAdjective(res.type)} ${res.city} city in ${res.country}</a> 
+            <table class="result-table">
+                <tr>
+                    <th>Hotel</th>
+                    <td>${res.hotel}</td>
+                </tr>
+                <tr>
+                    <th>Stars</th>
+                    <td>${'⭐'.repeat(res.stars)}</td>
+                </tr>
+                <tr>
+                    <th>Board</th>
+                    <td>${res.board}</td>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <td>£${res.price}</td>
+                </tr>
+            </table>`,
+            "result"
+        );
+    });
+
+    return [firstMessage, ...results];
+}
+
+const getAdjective = type => {
+    switch (type) {
+        case 'hot':
+            return 'sunny';
+        case 'cold':
+            return 'frosty';
+        case 'adventure':
+            return 'exciting';
+        case 'relaxing':
+            return 'tranquil';
+        case 'beach':
+            return 'carefree';
+        case 'snow':
+            return 'majestic';
+        case 'mild':
+            return 'temperate'
+        case 'sightseeing':
+            return 'beautiful';
+        default:
+            return 'incredible';
+    }
 }
 
 const getNextMessage = async (stage, input) => {

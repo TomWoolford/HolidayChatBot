@@ -31,7 +31,8 @@ const ChatContent = ({ open }) => {
                 setUserStages((prev) => [...prev, newStage]);
 
             if (newStage === 5) {
-                await calculateResults();
+                const results = await calculateResults();
+                setMessages((prev) => [...prev, ...results]);
             }
         }
         setLoading(false);
