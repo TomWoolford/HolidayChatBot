@@ -35,6 +35,10 @@ const partialMatches = new Message (
     "We hope you are satisfied with your results 😎 If not try typing 'price', 'board', 'stars', 'type' or 'all' to view the matches to your individual preferences."
 );
 
+const noRepeat = new Message(
+    "You have finished the survey! 💪 Check out your awesome results or type 'restart' to start again."
+);
+
 const questions = [
     welcomeMessage,
     new Message("Let's find you a holiday! 🏝😎 First off, would you prefer a 'hot', 'cold', 'mild', 'relaxing', 'snow', 'adventure' or 'beach' holiday?"),
@@ -54,4 +58,5 @@ export {
     invalidNumber,
     noResults, 
     partialMatches,
+    noRepeat
  }

@@ -10,6 +10,8 @@ const getNewStage = message => questions.findIndex(x => x.msg === message.msg);
 
 const getFirstResponse = () => questions[0];
 
+const lastElement = arr => [...arr][arr.length - 1];
+
 const getAdjective = type => {
     switch (type) {
         case 'hot':
@@ -39,5 +41,6 @@ export {
     getKeyWords,
     getNewStage,
     getFirstResponse,
-    getAdjective
+    getAdjective, 
+    lastElement,
 };

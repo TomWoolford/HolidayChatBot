@@ -4,8 +4,7 @@ import Responses from '../responses/Responses';
 import Loading from '../loading/Loading';
 import { Message } from '../../helpers/classes';
 import { getNextMessage } from '../../helpers/chatHandler';
-import { isValidInput, getFirstResponse, getNewStage } from '../../helpers/helpers';
-import { calculateResults } from '../../helpers/resultHandler';
+import { isValidInput, getFirstResponse, getNewStage, lastElement } from '../../helpers/helpers';
 import PropTypes from 'prop-types';
 import './chat.css';
 import '../loading/loading.css';
@@ -24,56 +23,47 @@ const ChatContent = ({ open }) => {
 
         // Check for valid input 
         if (isValidInput(userInput)) { 
-            // Clear chats
-            if (userInput === 'restart') 
-                setMessages([]);
-            
-            // User is requesting partial results
-            if (userStages[userStages.length - 1] === 5) 
-                return await getPartialResults(userStages[userStages.length - 1], userInput);
-
             // Show input as chat message
             setMessages((prev) => [...prev, new Message(userInput.trim(), "", true)]);
             
             // Get next message and stage
-            const nextMessage = await updateChat(userInput);
-            const newStage = updateStage(nextMessage[0]);
+            const nextMessage = await updateMessages(userInput);
+            const stageUpdate = updateStage(nextMessage[0]);
 
             // If we are at the end return results
-            if (newStage === 5) {
-                const results = await calculateResults();
-                setMessages((prev) => [...prev, ...results]);
-            }
+            if (stageUpdate.newStage === 5 && stageUpdate.update) 
+                await updateMessages("", 5);
         }
         setLoading(false);
     }
 
-    const getPartialResults = async (stage, input) => {
-        const results = await getNextMessage(stage, input);
-        
-        setMessages((prev) => [...prev, ...results]);
-        setuserInput('');
-        setLoading(false);
-
-        return;
-    }
-
     const updateStage = (message) => {
         const newStage = getNewStage(message);
-
-        if (newStage > -1 && newStage !== userStages[userStages.length - 1]) 
+        let update = false;
+        
+        if (newStage > -1 && newStage !== lastElement(userStages)) {
             setUserStages((prev) => [...prev, newStage]);
+            update = true;
+        }
 
-        return newStage;
+        return { newStage, update };
     }
 
-    const updateChat = async (input) => {
-        const nextMessage = await getNextMessage(userStages[userStages.length - 1], input.trim());
+    const updateMessages = async (input, stage = 0) => {
+        const trimmed = input ? input.trim() : "";
+        
+        const nextMessage = await getNextMessage(stage === 0 ? lastElement(userStages) : stage, trimmed);
+        isRestart(input);
         setMessages((prev) => [...prev, ...nextMessage]);
         setuserInput('');
 
         return nextMessage;
     }
+
+    const isRestart = (input) => {
+        if (input === 'restart')
+            setMessages((prev) => []);
+    } 
 
     return (
         <div 

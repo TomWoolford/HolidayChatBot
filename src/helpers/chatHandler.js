@@ -4,36 +4,46 @@ import { questions,
     notImplemented, 
     notRecognised,
     partialMatches,
+    noRepeat,
 } from "./responses";
-import { answer, matches, calculateResults, generateMatchList, clearAll } from "./resultHandler";
+import { answer, matches, generateMatchList, clearAll, calculateResults } from "./resultHandler";
 import { getKeyWords, fakeAPICall } from "./helpers";
 
 const getNextMessage = async (stage, input) => {
     await fakeAPICall(1000); // To simulate a call to a db
-    const inputTrimed = input.trim();
-    
-    if (inputTrimed === "help") return [helpMessage];
 
-    if (inputTrimed === "joke") return [notImplemented];
+    const inputTrimed = input ? input.trim() : "";
+    const help = getKeyWords(helpMessage.msg);
 
-    if (inputTrimed === "repeat" && stage !== 5) return [questions[stage]];
-
-    if (inputTrimed === "restart") {
-        clearAll();
-        return [questions[0]];
-    }
-
-    if (stage === 5) return getPartialList(input);
-
-    if (inputTrimed === "holiday" || stage > 0) return checkStageInput(stage, inputTrimed);
-
-    return [notRecognised];
+    if (help.some(key => key === inputTrimed))
+        return getHelp(inputTrimed, stage);
+        
+    return await checkStageInput(stage, inputTrimed);
 }
 
-const checkStageInput = (stage, input) => {
+const getHelp = async (input, stage) => {
+    switch (input) {
+        case 'help':
+            return [helpMessage];
+        case 'holiday':
+            return stage === 0 ? await checkStageInput(stage, input) : [questions[0]];
+        case 'joke':
+            return [notImplemented];
+        case 'repeat':
+            return stage !== 5 ? [questions[stage]] : [noRepeat];
+        case 'restart':
+            clearAll();
+            return [questions[0]];
+        default:
+            return [notRecognised];
+    }
+}
+
+const checkStageInput = async (stage, input) => {
     switch (stage) {
-        case 0: // display question 1 
-            return [questions[1]];
+        case 0: // display question 1 if holiday
+            if (input === 'holiday') 
+                return [questions[1]];
         case 1:
         case 2: // type and board
             const validAnswers = getKeyWords(questions[stage].msg);
@@ -65,13 +75,19 @@ const checkStageInput = (stage, input) => {
                 }
             }
             return [invalidNumber];
+        case 5: 
+            return await getResultsList(input);
         default:
             return [notRecognised];
     }
 }
 
-const getPartialList = (input) => {
+const getResultsList = async (input = "") => {
     const keys = getKeyWords(partialMatches.msg);
+    
+    if (input === "")
+        return await calculateResults();
+
     if (keys.some(key => key === input))
         return generateMatchList(matches[`${input}Matches`], true, input);
 
