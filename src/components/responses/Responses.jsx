@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useRef, useEffect, useMemo, memo } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { errorMessage } from '../../helpers/responses';
 import './responses.css';
 
@@ -7,8 +7,6 @@ const Responses = ({ messages }) => {
     const hiddenRef = useRef(0);
     const resultStartRef = useRef(0);
     const redundantRef = useRef(0);
-
-    const memoMessages = useMemo(() => (messages) ,[messages]);
     
     useEffect(() => {
         if (resultStartRef && resultStartRef.current)
@@ -16,14 +14,14 @@ const Responses = ({ messages }) => {
 
         if (hiddenRef && hiddenRef.current) 
             return scroll(hiddenRef.current);
-    }, [memoMessages]);
+    }, [messages]);
 
     const scroll = curr => curr.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
     return (
         <> 
             {
-                memoMessages ? memoMessages.map((message, idx) => {
+                messages ? messages.map((message, idx) => {
                     const cssClass = message.isUser ? `message user ${message.key}` : `message bot ${message.key}`;
                     return message.key !== "" ?
                         <p 
@@ -49,4 +47,4 @@ Responses.propTypes = {
     messages: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default React.memo(Responses);
+export default Responses;

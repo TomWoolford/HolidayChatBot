@@ -5,9 +5,11 @@ import { questions,
     notRecognised,
     partialMatches,
     noRepeat,
+    invalidString,
+    invalidArrayString,
 } from "./responses";
 import { answer, matches, generateMatchList, clearAll, calculateResults } from "./resultHandler";
-import { getKeyWords, fakeAPICall } from "./helpers";
+import { getKeyWords, fakeAPICall, splitAndRemoveSpace } from "./helpers";
 
 const getNextMessage = async (stage, input) => {
     await fakeAPICall(1000); // To simulate a call to a db
@@ -30,7 +32,7 @@ const getHelp = async (input, stage) => {
         case 'joke':
             return [notImplemented];
         case 'repeat':
-            return stage !== 5 ? [questions[stage]] : [noRepeat];
+            return stage !== 6 ? [questions[stage]] : [noRepeat];
         case 'restart':
             clearAll();
             return [questions[0]];
@@ -45,28 +47,28 @@ const checkStageInput = async (stage, input) => {
             if (input === 'holiday') 
                 return [questions[1]];
         case 1: // Temp
-        case 3: // Category
+        case 3: // Category both single string answers
             let validAnswers = getKeyWords(questions[stage].msg);
             const idx = validAnswers.indexOf(input);
             
             if (idx > -1) {
                 if (stage === 1) answer.temp = validAnswers[idx];
-                if (stage === 2) answer.board = validAnswers[idx];
+                if (stage === 3) answer.category = validAnswers[idx];
 
                 return [questions[++stage]];
             }
-            return [notRecognised];
-        case 2: // Location
+            return [invalidString];
+        case 2: // Location string array
             const locations = getKeyWords(questions[stage].msg);
-            const inputSplit = input.split(/[\s|-]/g);
-            
+            const inputSplit = [...new Set(splitAndRemoveSpace(input))];
+
             // Check each input matches a valid answer 
             if (inputSplit.every(el => locations.some(key => el === key))) {
                 answer.location = inputSplit;
                 return [questions[++stage]];
             }
-            return [notRecognised];
-        case 4: // stars and price
+            return [invalidArrayString];
+        case 4: // stars and price both number arrays
         case 5:
             const validInputs = getKeyWords(questions[stage].msg);
             const inputsConverted = validInputs.map(input => parseInt(input)); 
@@ -74,7 +76,7 @@ const checkStageInput = async (stage, input) => {
             const lower = Math.min(...inputsConverted); 
             const upper = Math.max(...inputsConverted);
 
-            const nums = input.split(/[\s|-]/g).filter(num => {return num !== ' ' && num !== ''});
+            const nums = splitAndRemoveSpace(input);
             const values = [...new Set(nums.map(num => parseInt(num)))]; // Remove duplicates
 
             if (!values.some(value => isNaN(value)) || values.length === 0) {

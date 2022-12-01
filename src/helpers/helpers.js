@@ -10,7 +10,9 @@ const getNewStage = message => questions.findIndex(x => x.msg === message.msg);
 
 const getFirstResponse = () => questions[0];
 
-const lastElement = arr => [...arr][arr.length - 1];
+const lastElement = arr => [...arr][arr.length - 1]; 
+
+const splitAndRemoveSpace = str => str.split(/[\s,-]/g).filter(word => {return word !== ' ' && word !== ''});
 
 const getAdjective = type => {
     switch (type) {
@@ -43,4 +45,5 @@ export {
     getFirstResponse,
     getAdjective, 
     lastElement,
+    splitAndRemoveSpace
 };

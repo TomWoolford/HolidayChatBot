@@ -8,8 +8,8 @@
       "Category": "active",
       "StarRating": 3,
       "TempRating": "mild",
-      "Location": "mountain",
-      "PricePerPerNight": 120
+      "Location": ["mountain"],
+      "PricePerNight": 120
     },
     {
       "HolidayReference": 2,
@@ -20,8 +20,8 @@
       "Category": "lazy",
       "StarRating": 4,
       "TempRating": "mild",
-      "Location": "city",
-      "PricePerPerNight": 28
+      "Location": ["city"],
+      "PricePerNight": 28
     },
     {
       "HolidayReference": 3,
@@ -32,8 +32,8 @@
       "Category": "active",
       "StarRating": 3,
       "TempRating": "mild",
-      "Location": "sea",
-      "PricePerPerNight": 42
+      "Location": ["sea"],
+      "PricePerNight": 42
     },
     {
       "HolidayReference": 4,
@@ -44,8 +44,8 @@
       "Category": "lazy",
       "StarRating": 5,
       "TempRating": "cold",
-      "Location": "mountain",
-      "PricePerPerNight": 50
+      "Location": ["mountain"],
+      "PricePerNight": 50
     },
     {
       "HolidayReference": 5,
@@ -56,8 +56,8 @@
       "Category": "lazy",
       "StarRating": 5,
       "TempRating": "hot",
-      "Location": "sea",
-      "PricePerPerNight": 67
+      "Location": ["sea"],
+      "PricePerNight": 67
     },
     {
       "HolidayReference": 6,
@@ -68,8 +68,8 @@
       "Category": "lazy",
       "StarRating": 3,
       "TempRating": "mild",
-      "Location": "sea",
-      "PricePerPerNight": 120
+      "Location": ["sea"],
+      "PricePerNight": 120
     },
     {
       "HolidayReference": 7,
@@ -80,8 +80,8 @@
       "Category": "active",
       "StarRating": 4,
       "TempRating": "mild",
-      "Location": "city",
-      "PricePerPerNight": 45
+      "Location": ["city"],
+      "PricePerNight": 45
     },
     {
       "HolidayReference": 8,
@@ -92,8 +92,8 @@
       "Category": "active",
       "StarRating": 4,
       "TempRating": "mild",
-      "Location": "sea",
-      "PricePerPerNight": 78
+      "Location": ["sea"],
+      "PricePerNight": 78
     },
     {
       "HolidayReference": 9,
@@ -104,8 +104,8 @@
       "Category": "active",
       "StarRating": 4,
       "TempRating": "hot",
-      "Location": "mountain",
-      "PricePerPerNight": 67
+      "Location": ["mountain"],
+      "PricePerNight": 67
     },
     {
       "HolidayReference": 10,
@@ -116,8 +116,8 @@
       "Category": "active",
       "StarRating": 3,
       "TempRating": "mild",
-      "Location": "sea",
-      "PricePerPerNight": 54
+      "Location": ["sea"],
+      "PricePerNight": 54
     },
     {
       "HolidayReference": 11,
@@ -128,8 +128,8 @@
       "Category": "active",
       "StarRating": 3,
       "TempRating": "mild",
-      "Location": "city",
-      "PricePerPerNight": 27
+      "Location": ["city"],
+      "PricePerNight": 27
     },
     {
       "HolidayReference": 12,
@@ -140,8 +140,8 @@
       "Category": "active",
       "StarRating": 5,
       "TempRating": "mild",
-      "Location": "sea",
-      "PricePerPerNight": 78
+      "Location": ["sea"],
+      "PricePerNight": 78
     },
     {
       "HolidayReference": 13,
@@ -152,8 +152,8 @@
       "Category": "lazy",
       "StarRating": 3,
       "TempRating": "mild",
-      "Location": "city",
-      "PricePerPerNight": 53
+      "Location": ["city"],
+      "PricePerNight": 53
     },
     {
       "HolidayReference": 14,
@@ -164,8 +164,8 @@
       "Category": "lazy",
       "StarRating": 5,
       "TempRating": "mild",
-      "Location": "city",
-      "PricePerPerNight": 25
+      "Location": ["city"],
+      "PricePerNight": 25
     },
     {
       "HolidayReference": 15,
@@ -176,8 +176,8 @@
       "Category": "active",
       "StarRating": 5,
       "TempRating": "mild",
-      "Location": "mountain",
-      "PricePerPerNight": 54
+      "Location": ["mountain"],
+      "PricePerNight": 54
     },
     {
       "HolidayReference": 16,
@@ -188,8 +188,8 @@
       "Category": "lazy",
       "StarRating": 4,
       "TempRating": "hot",
-      "Location": "sea",
-      "PricePerPerNight": 67
+      "Location": ["sea"],
+      "PricePerNight": 67
     },
     {
       "HolidayReference": 17,
@@ -200,8 +200,8 @@
       "Category": "active",
       "StarRating": 4,
       "TempRating": "mild",
-      "Location": "mountain",
-      "PricePerPerNight": 89
+      "Location": ["mountain"],
+      "PricePerNight": 89
     },
     {
       "HolidayReference": 18,
@@ -212,8 +212,8 @@
       "Category": "lazy",
       "StarRating": 5,
       "TempRating": "mild",
-      "Location": "city",
-      "PricePerPerNight": 29
+      "Location": ["city"],
+      "PricePerNight": 29
     },
     {
       "HolidayReference": 19,
@@ -224,8 +224,8 @@
       "Category": "active",
       "StarRating": 3,
       "TempRating": "mild",
-      "Location": "city",
-      "PricePerPerNight": 71
+      "Location": ["city"],
+      "PricePerNight": 71
     },
     {
       "HolidayReference": 20,
@@ -236,8 +236,8 @@
       "Category": "active",
       "StarRating": 5,
       "TempRating": "cold",
-      "Location": "mountain",
-      "PricePerPerNight": 270
+      "Location": ["mountain"],
+      "PricePerNight": 270
     },
     {
       "HolidayReference": 21,
@@ -248,8 +248,8 @@
       "Category": "active",
       "StarRating": 5,
       "TempRating": "cold",
-      "Location": "mountain",
-      "PricePerPerNight": 250
+      "Location": ["mountain"],
+      "PricePerNight": 250
     },
     {
         "HolidayReference": 22,
