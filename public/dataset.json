@@ -1,0 +1,1748 @@
+[
+    {
+      "HolidayReference": 1,
+      "HotelName": "Uptown",
+      "City": "Bali",
+      "Continent": "Asia",
+      "Country": "Indonesia",
+      "Category": "active",
+      "StarRating": 3,
+      "TempRating": "mild",
+      "Location": ["mountain"],
+      "PricePerNight": 120
+    },
+    {
+      "HolidayReference": 2,
+      "HotelName": "Relaxamax",
+      "City": "New Orleans",
+      "Continent": "North America",
+      "Country": "USA",
+      "Category": "lazy",
+      "StarRating": 4,
+      "TempRating": "mild",
+      "Location": ["city"],
+      "PricePerNight": 28
+    },
+    {
+      "HolidayReference": 3,
+      "HotelName": "WindyBeach",
+      "City": "Ventry",
+      "Continent": "Europe",
+      "Country": "Ireland",
+      "Category": "active",
+      "StarRating": 3,
+      "TempRating": "mild",
+      "Location": ["sea"],
+      "PricePerNight": 42
+    },
+    {
+      "HolidayReference": 4,
+      "HotelName": "Twighlight",
+      "City": "Marrakech",
+      "Continent": "Africa",
+      "Country": "Morocco",
+      "Category": "lazy",
+      "StarRating": 5,
+      "TempRating": "cold",
+      "Location": ["mountain"],
+      "PricePerNight": 50
+    },
+    {
+      "HolidayReference": 5,
+      "HotelName": "TooHot",
+      "City": "Sydney",
+      "Continent": "Australia",
+      "Country": "Australia",
+      "Category": "lazy",
+      "StarRating": 5,
+      "TempRating": "hot",
+      "Location": ["sea"],
+      "PricePerNight": 67
+    },
+    {
+      "HolidayReference": 6,
+      "HotelName": "Castaway",
+      "City": "",
+      "Continent": "Africa",
+      "Country": "The Maldives",
+      "Category": "lazy",
+      "StarRating": 3,
+      "TempRating": "mild",
+      "Location": ["sea"],
+      "PricePerNight": 120
+    },
+    {
+      "HolidayReference": 7,
+      "HotelName": "Eiffel Park",
+      "City": "Paris",
+      "Continent": "Europe",
+      "Country": "France",
+      "Category": "active",
+      "StarRating": 4,
+      "TempRating": "mild",
+      "Location": ["city"],
+      "PricePerNight": 45
+    },
+    {
+      "HolidayReference": 8,
+      "HotelName": "The Cape",
+      "City": "Cape Town",
+      "Continent": "Africa",
+      "Country": "South Africa",
+      "Category": "active",
+      "StarRating": 4,
+      "TempRating": "mild",
+      "Location": ["sea"],
+      "PricePerNight": 78
+    },
+    {
+      "HolidayReference": 9,
+      "HotelName": "Desert Dreams",
+      "City": "Dubai",
+      "Continent": "Asia",
+      "Country": "U.A.E",
+      "Category": "active",
+      "StarRating": 4,
+      "TempRating": "hot",
+      "Location": ["mountain"],
+      "PricePerNight": 67
+    },
+    {
+      "HolidayReference": 10,
+      "HotelName": "SeaViews",
+      "City": "Bora Bora",
+      "Continent": "Australia",
+      "Country": "French Polynesia",
+      "Category": "active",
+      "StarRating": 3,
+      "TempRating": "mild",
+      "Location": ["sea"],
+      "PricePerNight": 54
+    },
+    {
+      "HolidayReference": 11,
+      "HotelName": "AppleCity",
+      "City": "New York",
+      "Continent": "North America",
+      "Country": "USA",
+      "Category": "active",
+      "StarRating": 3,
+      "TempRating": "mild",
+      "Location": ["city"],
+      "PricePerNight": 27
+    },
+    {
+      "HolidayReference": 12,
+      "HotelName": "IslandHopper",
+      "City": "Dubrovnik",
+      "Continent": "Europe",
+      "Country": "Croatia",
+      "Category": "active",
+      "StarRating": 5,
+      "TempRating": "mild",
+      "Location": ["sea"],
+      "PricePerNight": 78
+    },
+    {
+      "HolidayReference": 13,
+      "HotelName": "CastleTown",
+      "City": "Edinburgh",
+      "Continent": "Europe",
+      "Country": "Scotland",
+      "Category": "lazy",
+      "StarRating": 3,
+      "TempRating": "mild",
+      "Location": ["city"],
+      "PricePerNight": 53
+    },
+    {
+      "HolidayReference": 14,
+      "HotelName": "WineValley",
+      "City": "Rome",
+      "Continent": "Europe",
+      "Country": "Italy",
+      "Category": "lazy",
+      "StarRating": 5,
+      "TempRating": "mild",
+      "Location": ["city"],
+      "PricePerNight": 25
+    },
+    {
+      "HolidayReference": 15,
+      "HotelName": "WearyTraveller",
+      "City": "Paro Valley",
+      "Continent": "Asia",
+      "Country": "Bhutan",
+      "Category": "active",
+      "StarRating": 5,
+      "TempRating": "mild",
+      "Location": ["mountain"],
+      "PricePerNight": 54
+    },
+    {
+      "HolidayReference": 16,
+      "HotelName": "HotTimes",
+      "City": "Jaipur",
+      "Continent": "Asia",
+      "Country": "India",
+      "Category": "lazy",
+      "StarRating": 4,
+      "TempRating": "hot",
+      "Location": ["sea"],
+      "PricePerNight": 67
+    },
+    {
+      "HolidayReference": 17,
+      "HotelName": "ForestRetreat",
+      "City": "Waikato",
+      "Continent": "Australia",
+      "Country": "New Zealand",
+      "Category": "active",
+      "StarRating": 4,
+      "TempRating": "mild",
+      "Location": ["mountain"],
+      "PricePerNight": 89
+    },
+    {
+      "HolidayReference": 18,
+      "HotelName": "Casablanca",
+      "City": "Havana",
+      "Continent": "North America",
+      "Country": "Cuba",
+      "Category": "lazy",
+      "StarRating": 5,
+      "TempRating": "mild",
+      "Location": ["city"],
+      "PricePerNight": 29
+    },
+    {
+      "HolidayReference": 19,
+      "HotelName": "TechCity",
+      "City": "Tokyo",
+      "Continent": "Asia",
+      "Country": "Japan",
+      "Category": "active",
+      "StarRating": 3,
+      "TempRating": "mild",
+      "Location": ["city"],
+      "PricePerNight": 71
+    },
+    {
+      "HolidayReference": 20,
+      "HotelName": "IceHotel",
+      "City": "Base Marambio",
+      "Continent": "Antarctica",
+      "Country": "Antartica",
+      "Category": "active",
+      "StarRating": 5,
+      "TempRating": "cold",
+      "Location": ["mountain"],
+      "PricePerNight": 270
+    },
+    {
+      "HolidayReference": 21,
+      "HotelName": "NorthStar",
+      "City": "",
+      "Continent": "Arctic",
+      "Country": "Greenland",
+      "Category": "active",
+      "StarRating": 5,
+      "TempRating": "cold",
+      "Location": ["mountain"],
+      "PricePerNight": 250
+    },
+    {
+        "HolidayReference": 22,
+        "HotelName": "Helixo",
+        "City": "Tuttle",
+        "Continent": "Antarctica",
+        "Country": "Malawi",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 280.49
+    },
+    {
+        "HolidayReference": 23,
+        "HotelName": "Pushcart",
+        "City": "Taft",
+        "Continent": "Australia",
+        "Country": "Gabon",
+        "Category": "lazy",
+        "StarRating": 4,
+        "TempRating": "hot",
+        "Location": [
+        "mountain",
+        "sea"
+        ],
+        "PricePerNight": 179.2
+    },
+    {
+        "HolidayReference": 24,
+        "HotelName": "Oronoko",
+        "City": "Dola",
+        "Continent": "Africa",
+        "Country": "Greenland",
+        "Category": "sightseeing",
+        "StarRating": 3,
+        "TempRating": "hot",
+        "Location": [
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 240.04
+    },
+    {
+        "HolidayReference": 25,
+        "HotelName": "Terrago",
+        "City": "Canby",
+        "Continent": "North America",
+        "Country": "Russian Federation",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "sea",
+        "city"
+        ],
+        "PricePerNight": 41.58
+    },
+    {
+        "HolidayReference": 26,
+        "HotelName": "Organica",
+        "City": "Garfield",
+        "Continent": "Europe",
+        "Country": "Somalia",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "cold",
+        "Location": [
+        "sea",
+        "city",
+        "sea"
+        ],
+        "PricePerNight": 289.07
+    },
+    {
+        "HolidayReference": 27,
+        "HotelName": "Spherix",
+        "City": "Churchill",
+        "Continent": "Antarctica",
+        "Country": "Virgin Islands (British)",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 192.52
+    },
+    {
+        "HolidayReference": 28,
+        "HotelName": "Coriander",
+        "City": "Groveville",
+        "Continent": "Australia",
+        "Country": "Jamaica",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "city",
+        "mountain",
+        "mountain"
+        ],
+        "PricePerNight": 289.4
+    },
+    {
+        "HolidayReference": 29,
+        "HotelName": "Hyplex",
+        "City": "Leming",
+        "Continent": "Africa",
+        "Country": "Martinique",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 132.65
+    },
+    {
+        "HolidayReference": 30,
+        "HotelName": "Unia",
+        "City": "Calpine",
+        "Continent": "Asia",
+        "Country": "Kenya",
+        "Category": "adventure",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "sea",
+        "city"
+        ],
+        "PricePerNight": 281.35
+    },
+    {
+        "HolidayReference": 31,
+        "HotelName": "Naxdis",
+        "City": "Saddlebrooke",
+        "Continent": "Asia",
+        "Country": "Bangladesh",
+        "Category": "adventure",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "city",
+        "city",
+        "city"
+        ],
+        "PricePerNight": 257.1
+    },
+    {
+        "HolidayReference": 32,
+        "HotelName": "Biotica",
+        "City": "Abrams",
+        "Continent": "Antarctica",
+        "Country": "Yugoslavia",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "city",
+        "city",
+        "city"
+        ],
+        "PricePerNight": 214.8
+    },
+    {
+        "HolidayReference": 33,
+        "HotelName": "Opportech",
+        "City": "Topaz",
+        "Continent": "Europe",
+        "Country": "Ukraine",
+        "Category": "lazy",
+        "StarRating": 4,
+        "TempRating": "mild",
+        "Location": [
+        "mountain",
+        "sea"
+        ],
+        "PricePerNight": 264.05
+    },
+    {
+        "HolidayReference": 34,
+        "HotelName": "Digiprint",
+        "City": "Gibbsville",
+        "Continent": "Arctic",
+        "Country": "Denmark",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "mild",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 288.24
+    },
+    {
+        "HolidayReference": 35,
+        "HotelName": "Exiand",
+        "City": "Tecolotito",
+        "Continent": "Arctic",
+        "Country": "Christmas Island",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 274.38
+    },
+    {
+        "HolidayReference": 36,
+        "HotelName": "Pharmacon",
+        "City": "Emory",
+        "Continent": "Arctic",
+        "Country": "Slovak Republic",
+        "Category": "adventure",
+        "StarRating": 3,
+        "TempRating": "hot",
+        "Location": [
+        "city",
+        "mountain",
+        "sea"
+        ],
+        "PricePerNight": 244.19
+    },
+    {
+        "HolidayReference": 37,
+        "HotelName": "Orbaxter",
+        "City": "Vallonia",
+        "Continent": "Africa",
+        "Country": "Aruba",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "mountain",
+        "mountain"
+        ],
+        "PricePerNight": 25.5
+    },
+    {
+        "HolidayReference": 38,
+        "HotelName": "Asimiline",
+        "City": "Hessville",
+        "Continent": "North America",
+        "Country": "Tunisia",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "mountain",
+        "city",
+        "mountain"
+        ],
+        "PricePerNight": 259.94
+    },
+    {
+        "HolidayReference": 39,
+        "HotelName": "Comveyor",
+        "City": "Eastmont",
+        "Continent": "Australia",
+        "Country": "Mali",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 253.44
+    },
+    {
+        "HolidayReference": 40,
+        "HotelName": "Zizzle",
+        "City": "Dundee",
+        "Continent": "North America",
+        "Country": "St. Helena",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city",
+        "sea",
+        "city"
+        ],
+        "PricePerNight": 172.37
+    },
+    {
+        "HolidayReference": 41,
+        "HotelName": "Solgan",
+        "City": "Oley",
+        "Continent": "North America",
+        "Country": "Svalbard and Jan Mayen Islands",
+        "Category": "adventure",
+        "StarRating": 3,
+        "TempRating": "hot",
+        "Location": [
+        "sea"
+        ],
+        "PricePerNight": 201.36
+    },
+    {
+        "HolidayReference": 42,
+        "HotelName": "Kangle",
+        "City": "Lindisfarne",
+        "Continent": "Asia",
+        "Country": "Chad",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 178.57
+    },
+    {
+        "HolidayReference": 43,
+        "HotelName": "Handshake",
+        "City": "Mansfield",
+        "Continent": "Europe",
+        "Country": "Suriname",
+        "Category": "sightseeing",
+        "StarRating": 4,
+        "TempRating": "mild",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 192.94
+    },
+    {
+        "HolidayReference": 44,
+        "HotelName": "Idealis",
+        "City": "Stagecoach",
+        "Continent": "Antarctica",
+        "Country": "Antarctica",
+        "Category": "sightseeing",
+        "StarRating": 3,
+        "TempRating": "hot",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 183.22
+    },
+    {
+        "HolidayReference": 45,
+        "HotelName": "Retrack",
+        "City": "Brule",
+        "Continent": "Arctic",
+        "Country": "New Zealand",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "city",
+        "sea",
+        "sea"
+        ],
+        "PricePerNight": 194.17
+    },
+    {
+        "HolidayReference": 46,
+        "HotelName": "Isologia",
+        "City": "Shindler",
+        "Continent": "North America",
+        "Country": "Norway",
+        "Category": "sightseeing",
+        "StarRating": 3,
+        "TempRating": "cold",
+        "Location": [
+        "sea"
+        ],
+        "PricePerNight": 209.04
+    },
+    {
+        "HolidayReference": 47,
+        "HotelName": "Biolive",
+        "City": "Ogema",
+        "Continent": "Africa",
+        "Country": "Mexico",
+        "Category": "adventure",
+        "StarRating": 3,
+        "TempRating": "cold",
+        "Location": [
+        "sea"
+        ],
+        "PricePerNight": 65.43
+    },
+    {
+        "HolidayReference": 48,
+        "HotelName": "Qualitex",
+        "City": "Dunnavant",
+        "Continent": "Europe",
+        "Country": "El Salvador",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "cold",
+        "Location": [
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 262.91
+    },
+    {
+        "HolidayReference": 49,
+        "HotelName": "Zoinage",
+        "City": "Kersey",
+        "Continent": "Arctic",
+        "Country": "Spain",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 155.69
+    },
+    {
+        "HolidayReference": 50,
+        "HotelName": "Medmex",
+        "City": "Henrietta",
+        "Continent": "North America",
+        "Country": "Zaire",
+        "Category": "adventure",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 232.51
+    },
+    {
+        "HolidayReference": 51,
+        "HotelName": "Earwax",
+        "City": "Garnet",
+        "Continent": "Antarctica",
+        "Country": "Anguilla",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 234.83
+    },
+    {
+        "HolidayReference": 52,
+        "HotelName": "Ewaves",
+        "City": "Alderpoint",
+        "Continent": "Africa",
+        "Country": "Portugal",
+        "Category": "sightseeing",
+        "StarRating": 4,
+        "TempRating": "cold",
+        "Location": [
+        "sea",
+        "city",
+        "mountain"
+        ],
+        "PricePerNight": 83.01
+    },
+    {
+        "HolidayReference": 53,
+        "HotelName": "Sarasonic",
+        "City": "Cumminsville",
+        "Continent": "Europe",
+        "Country": "China",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 195.99
+    },
+    {
+        "HolidayReference": 54,
+        "HotelName": "Eschoir",
+        "City": "Springhill",
+        "Continent": "Australia",
+        "Country": "Ethiopia",
+        "Category": "sightseeing",
+        "StarRating": 3,
+        "TempRating": "cold",
+        "Location": [
+        "sea"
+        ],
+        "PricePerNight": 135.08
+    },
+    {
+        "HolidayReference": 55,
+        "HotelName": "Netplax",
+        "City": "Crayne",
+        "Continent": "Arctic",
+        "Country": "Saint Vincent and The Grenadines",
+        "Category": "adventure",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "sea",
+        "city",
+        "city"
+        ],
+        "PricePerNight": 206.84
+    },
+    {
+        "HolidayReference": 56,
+        "HotelName": "Lyrichord",
+        "City": "Washington",
+        "Continent": "North America",
+        "Country": "Cayman Islands",
+        "Category": "sightseeing",
+        "StarRating": 3,
+        "TempRating": "hot",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 291.97
+    },
+    {
+        "HolidayReference": 57,
+        "HotelName": "Steeltab",
+        "City": "Unionville",
+        "Continent": "Antarctica",
+        "Country": "Brunei Darussalam",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "hot",
+        "Location": [
+        "city",
+        "mountain"
+        ],
+        "PricePerNight": 59.43
+    },
+    {
+        "HolidayReference": 58,
+        "HotelName": "Trollery",
+        "City": "Robbins",
+        "Continent": "Australia",
+        "Country": "Iceland",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "sea",
+        "city",
+        "mountain"
+        ],
+        "PricePerNight": 88.67
+    },
+    {
+        "HolidayReference": 59,
+        "HotelName": "Cuizine",
+        "City": "Wollochet",
+        "Continent": "Africa",
+        "Country": "Jordan",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "hot",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 56.29
+    },
+    {
+        "HolidayReference": 60,
+        "HotelName": "Cemention",
+        "City": "Vale",
+        "Continent": "Asia",
+        "Country": "United Kingdom",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city",
+        "sea"
+        ],
+        "PricePerNight": 279.92
+    },
+    {
+        "HolidayReference": 61,
+        "HotelName": "Polaria",
+        "City": "Campo",
+        "Continent": "Africa",
+        "Country": "Wallis and Futuna Islands",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "mountain",
+        "sea"
+        ],
+        "PricePerNight": 213.02
+    },
+    {
+        "HolidayReference": 62,
+        "HotelName": "Kenegy",
+        "City": "Lloyd",
+        "Continent": "Antarctica",
+        "Country": "Samoa",
+        "Category": "adventure",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "city",
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 200.3
+    },
+    {
+        "HolidayReference": 63,
+        "HotelName": "Ramjob",
+        "City": "Mathews",
+        "Continent": "North America",
+        "Country": "Liechtenstein",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "city",
+        "mountain"
+        ],
+        "PricePerNight": 199.09
+    },
+    {
+        "HolidayReference": 64,
+        "HotelName": "Exoplode",
+        "City": "Snyderville",
+        "Continent": "Arctic",
+        "Country": "Vatican City State (Holy See)",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 151.49
+    },
+    {
+        "HolidayReference": 65,
+        "HotelName": "Avenetro",
+        "City": "Craig",
+        "Continent": "Asia",
+        "Country": "Taiwan",
+        "Category": "adventure",
+        "StarRating": 3,
+        "TempRating": "cold",
+        "Location": [
+        "sea"
+        ],
+        "PricePerNight": 120.13
+    },
+    {
+        "HolidayReference": 66,
+        "HotelName": "Quordate",
+        "City": "Marion",
+        "Continent": "Asia",
+        "Country": "Switzerland",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "mild",
+        "Location": [
+        "city",
+        "city"
+        ],
+        "PricePerNight": 234.58
+    },
+    {
+        "HolidayReference": 67,
+        "HotelName": "Yogasm",
+        "City": "Leland",
+        "Continent": "Australia",
+        "Country": "Niue",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city",
+        "city"
+        ],
+        "PricePerNight": 45.6
+    },
+    {
+        "HolidayReference": 68,
+        "HotelName": "Omatom",
+        "City": "Concho",
+        "Continent": "Asia",
+        "Country": "Pakistan",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 31.83
+    },
+    {
+        "HolidayReference": 69,
+        "HotelName": "Empirica",
+        "City": "Welch",
+        "Continent": "Africa",
+        "Country": "Netherlands Antilles",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "cold",
+        "Location": [
+        "sea",
+        "sea",
+        "sea"
+        ],
+        "PricePerNight": 146.04
+    },
+    {
+        "HolidayReference": 70,
+        "HotelName": "Xerex",
+        "City": "Albany",
+        "Continent": "Antarctica",
+        "Country": "Norfolk Island",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "city",
+        "city",
+        "mountain"
+        ],
+        "PricePerNight": 29.25
+    },
+    {
+        "HolidayReference": 71,
+        "HotelName": "Malathion",
+        "City": "Faywood",
+        "Continent": "Asia",
+        "Country": "Montserrat",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "mild",
+        "Location": [
+        "city",
+        "sea"
+        ],
+        "PricePerNight": 192.2
+    },
+    {
+        "HolidayReference": 72,
+        "HotelName": "Progenex",
+        "City": "Stonybrook",
+        "Continent": "Africa",
+        "Country": "Solomon Islands",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "city",
+        "sea"
+        ],
+        "PricePerNight": 136.83
+    },
+    {
+        "HolidayReference": 73,
+        "HotelName": "Proflex",
+        "City": "Carbonville",
+        "Continent": "Asia",
+        "Country": "Sri Lanka",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "sea"
+        ],
+        "PricePerNight": 212.22
+    },
+    {
+        "HolidayReference": 74,
+        "HotelName": "Magnina",
+        "City": "Cataract",
+        "Continent": "Arctic",
+        "Country": "Papua New Guinea",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "sea",
+        "sea",
+        "sea"
+        ],
+        "PricePerNight": 131.89
+    },
+    {
+        "HolidayReference": 75,
+        "HotelName": "Artworlds",
+        "City": "Stollings",
+        "Continent": "Asia",
+        "Country": "Antigua and Barbuda",
+        "Category": "sightseeing",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "sea",
+        "mountain"
+        ],
+        "PricePerNight": 90.67
+    },
+    {
+        "HolidayReference": 76,
+        "HotelName": "Rodemco",
+        "City": "Smeltertown",
+        "Continent": "Australia",
+        "Country": "Moldova",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 218.07
+    },
+    {
+        "HolidayReference": 77,
+        "HotelName": "Signidyne",
+        "City": "Walton",
+        "Continent": "Antarctica",
+        "Country": "Kyrgyzstan",
+        "Category": "sightseeing",
+        "StarRating": 4,
+        "TempRating": "hot",
+        "Location": [
+        "sea",
+        "sea",
+        "city"
+        ],
+        "PricePerNight": 124.04
+    },
+    {
+        "HolidayReference": 78,
+        "HotelName": "Virva",
+        "City": "Moscow",
+        "Continent": "Australia",
+        "Country": "Malaysia",
+        "Category": "lazy",
+        "StarRating": 4,
+        "TempRating": "cold",
+        "Location": [
+        "sea"
+        ],
+        "PricePerNight": 247.83
+    },
+    {
+        "HolidayReference": 79,
+        "HotelName": "Zuvy",
+        "City": "Newkirk",
+        "Continent": "Antarctica",
+        "Country": "Hong Kong",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 53.67
+    },
+    {
+        "HolidayReference": 80,
+        "HotelName": "Nexgene",
+        "City": "Klagetoh",
+        "Continent": "Asia",
+        "Country": "Eritrea",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 26.17
+    },
+    {
+        "HolidayReference": 81,
+        "HotelName": "Zolarex",
+        "City": "Ellerslie",
+        "Continent": "North America",
+        "Country": "Nicaragua",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 146.95
+    },
+    {
+        "HolidayReference": 82,
+        "HotelName": "Ovium",
+        "City": "Glidden",
+        "Continent": "Antarctica",
+        "Country": "Croatia (Hrvatska)",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "mountain",
+        "mountain"
+        ],
+        "PricePerNight": 179.08
+    },
+    {
+        "HolidayReference": 83,
+        "HotelName": "Zilidium",
+        "City": "Thornport",
+        "Continent": "Asia",
+        "Country": "Cote D'Ivoire (Ivory Coast)",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "sea",
+        "city",
+        "city"
+        ],
+        "PricePerNight": 287.91
+    },
+    {
+        "HolidayReference": 84,
+        "HotelName": "Inquala",
+        "City": "Blackgum",
+        "Continent": "Arctic",
+        "Country": "Micronesia",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "sea",
+        "city",
+        "city"
+        ],
+        "PricePerNight": 121.54
+    },
+    {
+        "HolidayReference": 85,
+        "HotelName": "Accufarm",
+        "City": "Lupton",
+        "Continent": "Antarctica",
+        "Country": "Belarus",
+        "Category": "lazy",
+        "StarRating": 4,
+        "TempRating": "hot",
+        "Location": [
+        "sea"
+        ],
+        "PricePerNight": 277.74
+    },
+    {
+        "HolidayReference": 86,
+        "HotelName": "Enthaze",
+        "City": "Brutus",
+        "Continent": "Europe",
+        "Country": "Saint Lucia",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "hot",
+        "Location": [
+        "city",
+        "sea"
+        ],
+        "PricePerNight": 284.13
+    },
+    {
+        "HolidayReference": 87,
+        "HotelName": "Centice",
+        "City": "Thomasville",
+        "Continent": "Europe",
+        "Country": "Heard and McDonald Islands",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "city",
+        "sea"
+        ],
+        "PricePerNight": 261.71
+    },
+    {
+        "HolidayReference": 88,
+        "HotelName": "Crustatia",
+        "City": "Cade",
+        "Continent": "Australia",
+        "Country": "US Minor Outlying Islands",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "hot",
+        "Location": [
+        "city",
+        "mountain"
+        ],
+        "PricePerNight": 149.99
+    },
+    {
+        "HolidayReference": 89,
+        "HotelName": "Namegen",
+        "City": "Bowie",
+        "Continent": "Arctic",
+        "Country": "New Caledonia",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 116.16
+    },
+    {
+        "HolidayReference": 90,
+        "HotelName": "Extremo",
+        "City": "Delco",
+        "Continent": "Antarctica",
+        "Country": "Belgium",
+        "Category": "sightseeing",
+        "StarRating": 4,
+        "TempRating": "hot",
+        "Location": [
+        "city",
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 67.82
+    },
+    {
+        "HolidayReference": 91,
+        "HotelName": "Zytrac",
+        "City": "Sunriver",
+        "Continent": "Europe",
+        "Country": "Viet Nam",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "sea",
+        "mountain"
+        ],
+        "PricePerNight": 255.6
+    },
+    {
+        "HolidayReference": 92,
+        "HotelName": "Snorus",
+        "City": "Benson",
+        "Continent": "Asia",
+        "Country": "Gambia",
+        "Category": "sightseeing",
+        "StarRating": 4,
+        "TempRating": "cold",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 178.95
+    },
+    {
+        "HolidayReference": 93,
+        "HotelName": "Zork",
+        "City": "Bendon",
+        "Continent": "Arctic",
+        "Country": "Tonga",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "mild",
+        "Location": [
+        "sea",
+        "city"
+        ],
+        "PricePerNight": 163.07
+    },
+    {
+        "HolidayReference": 94,
+        "HotelName": "Chorizon",
+        "City": "Konterra",
+        "Continent": "Antarctica",
+        "Country": "Mauritius",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "sea",
+        "city",
+        "city"
+        ],
+        "PricePerNight": 39.65
+    },
+    {
+        "HolidayReference": 95,
+        "HotelName": "Isoplex",
+        "City": "Groton",
+        "Continent": "Europe",
+        "Country": "Laos",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "sea"
+        ],
+        "PricePerNight": 290.79
+    },
+    {
+        "HolidayReference": 96,
+        "HotelName": "Brainquil",
+        "City": "Joes",
+        "Continent": "Antarctica",
+        "Country": "Bosnia and Herzegovina",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "mild",
+        "Location": [
+        "mountain",
+        "mountain"
+        ],
+        "PricePerNight": 153.1
+    },
+    {
+        "HolidayReference": 97,
+        "HotelName": "Anacho",
+        "City": "Cedarville",
+        "Continent": "Arctic",
+        "Country": "Burundi",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "hot",
+        "Location": [
+        "mountain",
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 154.18
+    },
+    {
+        "HolidayReference": 98,
+        "HotelName": "Arctiq",
+        "City": "Strykersville",
+        "Continent": "Asia",
+        "Country": "Albania",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "hot",
+        "Location": [
+        "sea"
+        ],
+        "PricePerNight": 283.44
+    },
+    {
+        "HolidayReference": 99,
+        "HotelName": "Daido",
+        "City": "Enlow",
+        "Continent": "Asia",
+        "Country": "Macedonia",
+        "Category": "sightseeing",
+        "StarRating": 3,
+        "TempRating": "cold",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 43.86
+    },
+    {
+        "HolidayReference": 100,
+        "HotelName": "Shopabout",
+        "City": "Kingstowne",
+        "Continent": "Africa",
+        "Country": "Cambodia",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "city",
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 81.86
+    },
+    {
+        "HolidayReference": 101,
+        "HotelName": "Digigen",
+        "City": "Heil",
+        "Continent": "Arctic",
+        "Country": "Georgia",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 272.67
+    },
+    {
+        "HolidayReference": 102,
+        "HotelName": "Macronaut",
+        "City": "Ladera",
+        "Continent": "Antarctica",
+        "Country": "Comoros",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 175.95
+    },
+    {
+        "HolidayReference": 103,
+        "HotelName": "Telepark",
+        "City": "Motley",
+        "Continent": "Europe",
+        "Country": "Mauritania",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city",
+        "sea",
+        "sea"
+        ],
+        "PricePerNight": 218.29
+    },
+    {
+        "HolidayReference": 104,
+        "HotelName": "Zilphur",
+        "City": "Navarre",
+        "Continent": "Asia",
+        "Country": "Tuvalu",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "hot",
+        "Location": [
+        "sea",
+        "mountain",
+        "mountain"
+        ],
+        "PricePerNight": 41.7
+    },
+    {
+        "HolidayReference": 105,
+        "HotelName": "Columella",
+        "City": "Eastvale",
+        "Continent": "Asia",
+        "Country": "Madagascar",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 204.65
+    },
+    {
+        "HolidayReference": 106,
+        "HotelName": "Boilcat",
+        "City": "Rosewood",
+        "Continent": "North America",
+        "Country": "Dominica",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "mountain",
+        "mountain",
+        "sea"
+        ],
+        "PricePerNight": 200.12
+    },
+    {
+        "HolidayReference": 107,
+        "HotelName": "Solaren",
+        "City": "Coinjock",
+        "Continent": "Antarctica",
+        "Country": "Barbados",
+        "Category": "sightseeing",
+        "StarRating": 4,
+        "TempRating": "cold",
+        "Location": [
+        "sea",
+        "city"
+        ],
+        "PricePerNight": 232.08
+    },
+    {
+        "HolidayReference": 108,
+        "HotelName": "Yurture",
+        "City": "Jeff",
+        "Continent": "Arctic",
+        "Country": "Mayotte",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "sea",
+        "city",
+        "sea"
+        ],
+        "PricePerNight": 166.02
+    },
+    {
+        "HolidayReference": 109,
+        "HotelName": "Eventix",
+        "City": "Grantville",
+        "Continent": "Antarctica",
+        "Country": "Kiribati",
+        "Category": "lazy",
+        "StarRating": 3,
+        "TempRating": "hot",
+        "Location": [
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 260.89
+    },
+    {
+        "HolidayReference": 110,
+        "HotelName": "Furnitech",
+        "City": "Golconda",
+        "Continent": "North America",
+        "Country": "Vanuatu",
+        "Category": "sightseeing",
+        "StarRating": 3,
+        "TempRating": "cold",
+        "Location": [
+        "mountain",
+        "city",
+        "sea"
+        ],
+        "PricePerNight": 267.98
+    },
+    {
+        "HolidayReference": 111,
+        "HotelName": "Rodeocean",
+        "City": "Tetherow",
+        "Continent": "Europe",
+        "Country": "Syria",
+        "Category": "sightseeing",
+        "StarRating": 4,
+        "TempRating": "mild",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 288.77
+    },
+    {
+        "HolidayReference": 112,
+        "HotelName": "Futurity",
+        "City": "Coral",
+        "Continent": "Europe",
+        "Country": "Pitcairn",
+        "Category": "lazy",
+        "StarRating": 4,
+        "TempRating": "hot",
+        "Location": [
+        "city"
+        ],
+        "PricePerNight": 280.94
+    },
+    {
+        "HolidayReference": 113,
+        "HotelName": "Neurocell",
+        "City": "Bethany",
+        "Continent": "Europe",
+        "Country": "Morocco",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "city",
+        "sea",
+        "sea"
+        ],
+        "PricePerNight": 131.56
+    },
+    {
+        "HolidayReference": 114,
+        "HotelName": "Scenty",
+        "City": "Wawona",
+        "Continent": "North America",
+        "Country": "Sao Tome and Principe",
+        "Category": "lazy",
+        "StarRating": 5,
+        "TempRating": "hot",
+        "Location": [
+        "mountain"
+        ],
+        "PricePerNight": 130.2
+    },
+    {
+        "HolidayReference": 115,
+        "HotelName": "Accusage",
+        "City": "Baker",
+        "Continent": "Asia",
+        "Country": "Angola",
+        "Category": "sightseeing",
+        "StarRating": 5,
+        "TempRating": "cold",
+        "Location": [
+        "mountain",
+        "mountain",
+        "city"
+        ],
+        "PricePerNight": 31.87
+    },
+    {
+        "HolidayReference": 116,
+        "HotelName": "Nitracyr",
+        "City": "Wiscon",
+        "Continent": "Africa",
+        "Country": "Netherlands",
+        "Category": "lazy",
+        "StarRating": 4,
+        "TempRating": "cold",
+        "Location": [
+        "city",
+        "city"
+        ],
+        "PricePerNight": 260.65
+    },
+    {
+        "HolidayReference": 117,
+        "HotelName": "Talendula",
+        "City": "Levant",
+        "Continent": "Europe",
+        "Country": "Falkland Islands (Malvinas)",
+        "Category": "sightseeing",
+        "StarRating": 3,
+        "TempRating": "cold",
+        "Location": [
+        "mountain",
+        "mountain"
+        ],
+        "PricePerNight": 297.37
+    },
+    {
+        "HolidayReference": 118,
+        "HotelName": "Halap",
+        "City": "Brenton",
+        "Continent": "Europe",
+        "Country": "Azerbaijan",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "hot",
+        "Location": [
+        "sea",
+        "sea"
+        ],
+        "PricePerNight": 246.47
+    },
+    {
+        "HolidayReference": 119,
+        "HotelName": "Miracula",
+        "City": "Kiskimere",
+        "Continent": "Australia",
+        "Country": "Ireland",
+        "Category": "sightseeing",
+        "StarRating": 3,
+        "TempRating": "cold",
+        "Location": [
+        "mountain",
+        "sea",
+        "city"
+        ],
+        "PricePerNight": 55.99
+    },
+    {
+        "HolidayReference": 120,
+        "HotelName": "Austex",
+        "City": "Accoville",
+        "Continent": "Australia",
+        "Country": "French Guiana",
+        "Category": "adventure",
+        "StarRating": 5,
+        "TempRating": "mild",
+        "Location": [
+        "city",
+        "city"
+        ],
+        "PricePerNight": 201.47
+    },
+    {
+        "HolidayReference": 121,
+        "HotelName": "Orbalix",
+        "City": "Blairstown",
+        "Continent": "Antarctica",
+        "Country": "Italy",
+        "Category": "adventure",
+        "StarRating": 4,
+        "TempRating": "cold",
+        "Location": [
+        "sea",
+        "city",
+        "mountain"
+        ],
+        "PricePerNight": 117.37
+    }
+]

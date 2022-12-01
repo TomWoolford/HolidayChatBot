@@ -31,8 +31,8 @@ const ChatContent = ({ open }) => {
             const stageUpdate = updateStage(nextMessage[0]);
 
             // If we are at the end return results
-            if (stageUpdate.newStage === 5 && stageUpdate.update) 
-                await updateMessages("", 5);
+            if (stageUpdate.newStage === 6 && stageUpdate.update) 
+                await updateMessages("", 6);
         }
         setLoading(false);
     }

@@ -8,16 +8,22 @@ class Message {
 
 class Answer {    
     /**
-     * @param {string} type
+     * @param {string} temp
      */
-    set type(type) {
-        this._type = type;
+    set temp(temp) {
+        this._temp = temp;
     }
     /**
-     * @param {string} board
+     * @param {string[]} location
      */
-    set board(board) {
-        this._board = board;
+    set location(location) {
+        this._location = location;
+    }
+    /**
+     * @param {string} category
+     */
+    set category(category){
+        this._category = category;
     }
     /**
      * @param {number[]} stars
@@ -33,10 +39,11 @@ class Answer {
     }
 
     reset() {
-        this._board = "";
+        this._location = [];
+        this._category = "";
         this._price = [];
         this._stars = [];
-        this._type = "";
+        this._temp = "";
     }
 };
 
