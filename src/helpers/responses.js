@@ -43,10 +43,11 @@ const questions = [
     welcomeMessage,
     new Message("Let's find you a holiday! 🏝😎 First off, would you prefer a 'hot', 'cold' or 'mild' holiday?"),
     new Message("Ok, What's your favourite backdrop? 🗻 'mountain', 'city' or 'sea'? If you can't decide you can enter more than one 😁"),
+    new Message("Nice! What do you ❤ doing on holiday? Are you an 'adventure', 'lazy' or 'sightseeing' kind of person?"),
     new Message("All right then, how many ⭐s does your hotel need to have? '3', '4' or '5'? You can enter more than one value, seperateed by a space 🙂"),
     new Message("Finally, please enter a price (per night) range 💲! You can enter one number; a maximum price, or two numbers as a price range. Please ensure the numbers are between '25' and '300', seperated by a dash - e.g. 150 - 450"),
     new Message("Awesome! Thank you for completing the questionnaire 😊 Give us a second to calculate your best matches! 🧮"),
-]; 
+];
 
 export { 
     welcomeMessage,

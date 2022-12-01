@@ -20,6 +20,12 @@ class Answer {
         this._location = location;
     }
     /**
+     * @param {string} category
+     */
+    set category(category){
+        this._category = category;
+    }
+    /**
      * @param {number[]} stars
      */
     set stars(stars) {
@@ -34,6 +40,7 @@ class Answer {
 
     reset() {
         this._location = [];
+        this._category = "";
         this._price = [];
         this._stars = [];
         this._temp = "";
