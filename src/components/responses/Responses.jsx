@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useMemo, memo } from 'react';
 import { errorMessage } from '../../helpers/responses';
 import './responses.css';
 
@@ -7,6 +7,8 @@ const Responses = ({ messages }) => {
     const hiddenRef = useRef(0);
     const resultStartRef = useRef(0);
     const redundantRef = useRef(0);
+
+    const memoMessages = useMemo(() => (messages) ,[messages]);
     
     useEffect(() => {
         if (resultStartRef && resultStartRef.current)
@@ -14,14 +16,14 @@ const Responses = ({ messages }) => {
 
         if (hiddenRef && hiddenRef.current) 
             return scroll(hiddenRef.current);
-    }, [messages]);
+    }, [memoMessages]);
 
     const scroll = curr => curr.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
     return (
         <> 
             {
-                messages ? messages.map((message, idx) => {
+                memoMessages ? memoMessages.map((message, idx) => {
                     const cssClass = message.isUser ? `message user ${message.key}` : `message bot ${message.key}`;
                     return message.key !== "" ?
                         <p 
@@ -36,7 +38,7 @@ const Responses = ({ messages }) => {
                             >{message.msg}
                         </p>
                 })
-                : errorMessage
+                : <p className="message bot">{errorMessage.msg}</p>
             }
             <div ref={hiddenRef}></div>
         </>
