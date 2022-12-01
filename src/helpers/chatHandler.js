@@ -44,22 +44,32 @@ const checkStageInput = async (stage, input) => {
         case 0: // display question 1 if holiday
             if (input === 'holiday') 
                 return [questions[1]];
-        case 1:
-        case 2: // type and board
+        case 1: // Temp
+        case 3: // Category
             const validAnswers = getKeyWords(questions[stage].msg);
             const idx = validAnswers.indexOf(input);
             
             if (idx > -1) {
-                if (stage === 1) answer.type = validAnswers[idx];
+                if (stage === 1) answer.temp = validAnswers[idx];
                 if (stage === 2) answer.board = validAnswers[idx];
 
                 return [questions[++stage]];
             }
             return [notRecognised];
-        case 3:
+        case 2: // Location
+            validAnswers = getKeyWords(questions[stage].msg);
+            const inputSplit = input.split(/[\s|-]/g);
+            
+            // Check each input matches a valid answer 
+            if (inputSplit.every(el => a.some(key => el === key))) {
+                answer.location = inputSplit;
+                return [questions[++stage]];
+            }
+            return [notRecognised];
         case 4: // stars and price
+        case 5:
             const validInputs = getKeyWords(questions[stage].msg);
-            const inputsConverted = validInputs.map(input => parseInt(input)); // Assumes a properly formed question with '' with a valid number inside - should try - catch in production
+            const inputsConverted = validInputs.map(input => parseInt(input)); 
             
             const lower = Math.min(...inputsConverted); 
             const upper = Math.max(...inputsConverted);
@@ -75,7 +85,7 @@ const checkStageInput = async (stage, input) => {
                 }
             }
             return [invalidNumber];
-        case 5: 
+        case 6: 
             return await getResultsList(input);
         default:
             return [notRecognised];
