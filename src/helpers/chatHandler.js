@@ -46,7 +46,7 @@ const checkStageInput = async (stage, input) => {
                 return [questions[1]];
         case 1: // Temp
         case 3: // Category
-            const validAnswers = getKeyWords(questions[stage].msg);
+            let validAnswers = getKeyWords(questions[stage].msg);
             const idx = validAnswers.indexOf(input);
             
             if (idx > -1) {
@@ -57,11 +57,11 @@ const checkStageInput = async (stage, input) => {
             }
             return [notRecognised];
         case 2: // Location
-            validAnswers = getKeyWords(questions[stage].msg);
+            const locations = getKeyWords(questions[stage].msg);
             const inputSplit = input.split(/[\s|-]/g);
             
             // Check each input matches a valid answer 
-            if (inputSplit.every(el => a.some(key => el === key))) {
+            if (inputSplit.every(el => locations.some(key => el === key))) {
                 answer.location = inputSplit;
                 return [questions[++stage]];
             }
@@ -79,7 +79,7 @@ const checkStageInput = async (stage, input) => {
 
             if (!values.some(value => isNaN(value)) || values.length === 0) {
                 if ((!values.some(value => value < lower || value > upper)) || stage === 4 && (values.length > 2 || values[0] > values[1])) {
-                    const key = stage === 3 ? "stars" : "price";
+                    const key = stage === 4 ? "stars" : "price";
                     answer[key] = values;
                     return [questions[++stage]];
                 }

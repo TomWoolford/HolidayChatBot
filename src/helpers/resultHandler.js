@@ -77,7 +77,7 @@ const generateMatchList = (matches, isPartial = false, type = "") => {
                 </tr>
                 <tr>
                     <th>Price</th>
-                    <td>£${res.price}</td>
+                    <td>£${res.PricePerNight}</td>
                 </tr>
             </table>`,
             "result"
