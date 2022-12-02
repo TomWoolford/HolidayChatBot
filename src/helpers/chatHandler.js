@@ -11,6 +11,7 @@ import { questions,
 } from "./responses";
 import { answer, matches, generateMatchList, clearAll, calculateResults } from "./resultHandler";
 import { getKeyWords, fakeAPICall, splitAndRemoveSpace } from "./helpers";
+import { Message } from "./classes";
 
 const getNextMessage = async (stage, input) => {
     await fakeAPICall(1000); // To simulate a call to a db
@@ -31,7 +32,7 @@ const getHelp = async (input, stage) => {
         case 'holiday':
             return stage === 0 ? await checkStageInput(stage, input) : [questions[0]];
         case 'joke':
-            return [notImplemented];
+            return await getJoke();
         case 'repeat':
             return stage !== 6 ? [questions[stage]] : [noRepeat];
         case 'save':
@@ -135,6 +136,24 @@ const getTextFromHMTL = () => {
             txtArray = [...txtArray, `${child.className.includes("bot") ? "Chat Agent" : "You"}: ${child.innerText}\n\n`];
         
     return txtArray;
+}
+
+const getJoke = async () => {
+    const data = await fetch("https://icanhazdadjoke.com/", {
+        headers: {
+            "Accept": "application/json",
+            "User-Agent": "My Library-(https://github.com/TomWoolford/HolidayChatBot)",
+        }, 
+        method: "GET"
+    }).catch(err => {
+        return new Message(
+            "I'm afraid we ran into a problem 😯 please try again, or type a different command"
+        );
+    });   
+
+    const joke = await data.json();
+
+    return [new Message(`${joke.joke} 🤣😂🤣`)];
 }
 
 export {
