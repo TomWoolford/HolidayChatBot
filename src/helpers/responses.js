@@ -11,7 +11,7 @@ const errorMessage = new Message (
 const helpMessage = new Message (
     "Try typing one of the below commands or keep an eye out for the keywords in single quotes ' '" +
     "<ul><li>Type 'help' to view this again</li><li>Type 'holiday' to get help finding a holiday</li><li>Type 'joke' for a joke</li>" +
-    "<li>Type 'repeat' to view the current question</li><li>Type 'restart' to start over</li></ul>",
+    "<li>Type 'repeat' to view the current question</li><li>Type 'restart' to start over</li><li>Type 'save' to download a copy of the conversation.</li></ul>",
     "help"
 ); // Add back, repeat?
 
@@ -51,6 +51,10 @@ const noRepeat = new Message(
     "You have finished the survey! 💪 Check out your awesome results or type 'restart' to start again."
 );
 
+const saveMessage = new Message(
+    "You can now view our conversation in the downloaded file 😊 Type help for options, or a keyword from our previous message to continue."
+);
+
 const questions = [
     welcomeMessage,
     new Message("Let's find you a holiday! 🏝😎 First off, would you prefer a 'hot', 'cold' or 'mild' holiday?"),
@@ -72,6 +76,7 @@ export {
     noResults, 
     partialMatches,
     noRepeat, 
+    saveMessage,
     invalidArrayString,
-    invalidString
+    invalidString,
  }

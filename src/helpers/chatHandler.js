@@ -7,6 +7,7 @@ import { questions,
     noRepeat,
     invalidString,
     invalidArrayString,
+    saveMessage,
 } from "./responses";
 import { answer, matches, generateMatchList, clearAll, calculateResults } from "./resultHandler";
 import { getKeyWords, fakeAPICall, splitAndRemoveSpace } from "./helpers";
@@ -33,6 +34,9 @@ const getHelp = async (input, stage) => {
             return [notImplemented];
         case 'repeat':
             return stage !== 6 ? [questions[stage]] : [noRepeat];
+        case 'save':
+            downloadChat();
+            return [saveMessage];
         case 'restart':
             clearAll();
             return [questions[0]];
@@ -104,6 +108,33 @@ const getResultsList = async (input = "") => {
         return generateMatchList(matches[`${input}Matches`], true, input);
 
     return [notRecognised];
+}
+
+const downloadChat = () => {
+    const el = document.createElement("a");
+    
+    const txt = getTextFromHMTL();
+    const file = new Blob(txt, {type: "text/plain", endings: "native"});
+
+    // Create and click <a> tag to dl file
+    el.href = URL.createObjectURL(file);
+    el.download = `holiday-chat-${new Date().toLocaleString('en-GB')}`;
+    document.body.appendChild(el);
+    el.click();
+    el.remove();
+    
+    return;
+}
+
+const getTextFromHMTL = () => {
+    var chat = document.getElementsByClassName('content');
+    let txtArray = [`Conversation log ${new Date().toLocaleString('en-GB')}\n\n`];
+    console.log(chat[0].children);
+    for (const child of chat[0].children) // Ignore the empty div
+        if (child.nodeName !== 'DIV')
+            txtArray = [...txtArray, `${child.className.includes("bot") ? "Chat Agent" : "You"}: ${child.innerText}\n\n`];
+        
+    return txtArray;
 }
 
 export {
