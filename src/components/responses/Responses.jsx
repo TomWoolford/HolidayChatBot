@@ -8,6 +8,7 @@ const Responses = ({ messages }) => {
     const resultStartRef = useRef(0);
     const redundantRef = useRef(0);
     
+    // Scroll to the correct item in the list
     useEffect(() => {
         if (resultStartRef && resultStartRef.current)
             return scroll(resultStartRef.current);
@@ -25,7 +26,7 @@ const Responses = ({ messages }) => {
                     const cssClass = message.isUser ? `message user ${message.key}` : `message bot ${message.key}`;
                     return message.key !== "" ?
                         <p 
-                            ref={message.key.includes("important") ? resultStartRef : redundantRef}
+                            ref={message.key.includes("important") ? resultStartRef : redundantRef} // Ref to scroll to item if "important"
                             className={cssClass}
                             key={`messages-${idx}`} 
                             dangerouslySetInnerHTML={{__html: message.msg}} 
@@ -38,7 +39,7 @@ const Responses = ({ messages }) => {
                 })
                 : <p className="message bot">{errorMessage.msg}</p>
             }
-            <div ref={hiddenRef}></div>
+            <div ref={hiddenRef}></div> 
         </>
     )
 }
