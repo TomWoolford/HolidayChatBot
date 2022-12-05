@@ -25,6 +25,7 @@ const getNextMessage = async (stage, input) => {
     return await checkStageInput(stage, inputTrimed);
 }
 
+// Return the correct help message
 const getHelp = async (input, stage) => {
     switch (input) {
         case 'help':
@@ -46,6 +47,7 @@ const getHelp = async (input, stage) => {
     }
 }
 
+// Handle the answers and next questions
 const checkStageInput = async (stage, input) => {
     switch (stage) {
         case 0: // display question 1 if holiday
