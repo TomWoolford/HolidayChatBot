@@ -12,11 +12,11 @@ const helpMessage = new Message (
     "Try typing one of the below commands or keep an eye out for the keywords in single quotes ' '" +
     "<ul><li>Type 'help' to view this again</li><li>Type 'holiday' to get help finding a holiday</li><li>Type 'joke' for a joke</li>" +
     "<li>Type 'repeat' to view the current question</li><li>Type 'restart' to start over</li><li>Type 'save' to download a copy of the conversation.</li></ul>",
-    "help"
-); // Add back, repeat?
+    "help important"
+); 
 
 const notRecognised = new Message (
-    "Ah man! I'm not sure what you're trying to say! 😕 Enter one of the keywords from above or type 'help' for a list of options"
+    "Ah man! I'm not sure what you're trying to say! 😕 Enter one of the keywords from above or type 'help' for a list of options", "important"
 );
 
 const invalidNumber = new Message (
@@ -48,21 +48,21 @@ const partialMatches = new Message (
 );
 
 const noRepeat = new Message(
-    "You have finished the survey! 💪 Check out your awesome results or type 'restart' to start again."
+    "You have finished the survey! 💪 Check out your awesome results or type 'restart' to start again.", "important"
 );
 
 const saveMessage = new Message(
-    "You can now view our conversation in the downloaded file 😊 Type help for options, or a keyword from our previous message to continue."
+    "You can now view our conversation in the downloaded file 😊 Type help for options, or a keyword from our previous message to continue.", "important"
 );
 
 const questions = [
     welcomeMessage,
-    new Message("Let's find you a holiday! 🏝😎 First off, would you prefer a 'hot', 'cold' or 'mild' holiday?"),
-    new Message("Ok, What's your favourite backdrop? 🗻 'mountain', 'city' or 'sea'? If you can't decide you can enter more than one 😁"),
-    new Message("Nice! What do you ❤ doing on holiday? Are you an 'adventure', 'lazy' or 'sightseeing' kind of person?"),
-    new Message("All right then, how many ⭐s does your hotel need to have? '3', '4' or '5'? You can enter more than one value, seperateed by a space 🙂"),
-    new Message("Finally, please enter a price (per night) range 💲! You can enter one number; a maximum price, or two numbers as a price range. Please ensure the numbers are between '25' and '300', seperated by a dash - e.g. 150 - 250"),
-    new Message("Awesome! Thank you for completing the questionnaire 😊 Give us a second to calculate your best matches! 🧮"),
+    new Message("Let's find you a holiday! 🏝😎 First off, would you prefer a 'hot', 'cold' or 'mild' holiday?", "important"),
+    new Message("Ok, What's your favourite backdrop? 🗻 'mountain', 'city' or 'sea'? If you can't decide you can enter more than one 😁", "important"),
+    new Message("Nice! What do you ❤ doing on holiday? Are you an 'adventure', 'lazy' or 'sightseeing' kind of person?", "important"),
+    new Message("All right then, how many ⭐s does your hotel need to have? '3', '4' or '5'? You can enter more than one value, seperateed by a space 🙂", "important"),
+    new Message("Finally, please enter a price (per night) range 💲! You can enter one number; a maximum price, or two numbers as a price range. Please ensure the numbers are between '25' and '300', seperated by a dash - e.g. 150 - 250", "important"),
+    new Message("Awesome! Thank you for completing the questionnaire 😊 Give us a second to calculate your best matches! 🧮", "important"),
 ];
 
 export { 

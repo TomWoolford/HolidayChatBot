@@ -25,7 +25,7 @@ const Responses = ({ messages }) => {
                     const cssClass = message.isUser ? `message user ${message.key}` : `message bot ${message.key}`;
                     return message.key !== "" ?
                         <p 
-                            ref={message.key === "matches" ? resultStartRef : redundantRef}
+                            ref={message.key.includes("important") ? resultStartRef : redundantRef}
                             className={cssClass}
                             key={`messages-${idx}`} 
                             dangerouslySetInnerHTML={{__html: message.msg}} 

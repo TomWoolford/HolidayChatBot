@@ -57,7 +57,7 @@ const generateMatchList = (matches, isPartial = false, type = "") => {
     
     const firstMessage = new Message(
         `We found <span>${matches.length}</span> ${!isPartial ? 'exact' : ''} matches${!isPartial ? '!' : ` for your ${type} preference.`}`, 
-        "matches"
+        "matches important"
     );
     const results = matches.map(res => {
         console.log(res);
