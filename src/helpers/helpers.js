@@ -45,5 +45,5 @@ export {
     getFirstResponse,
     getAdjective, 
     lastElement,
-    splitAndRemoveSpace
+    splitAndRemoveSpace,
 };
